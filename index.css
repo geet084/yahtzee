@@ -1,0 +1,64 @@
+article {
+  border: 1px solid red;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+}
+.total-score {
+  height: 40px;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upper, .lower, .bonus {
+  border: 1px solid green;
+  width: 100%;
+  margin: 2px;
+}
+
+.scores div {
+  display: flex;
+  justify-content: space-around;
+  height: 40px
+}
+
+#rolls {
+  display: flex;
+  flex-direction: column;
+}
+
+.dice-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.held {
+  background-color: pink;
+}
+
+.bonus #ch {
+  display: flex;
+  justify-content: space-around;
+}
+
+#roll-play {
+  display: flex;
+  justify-content: space-around;
+}
+
+#roll-play div {
+  border: 1px solid orange;
+}
+
+.box, .dbox {
+  border: 1px solid orange;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

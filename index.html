@@ -6,12 +6,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="index.css">
-  <title>Document</title>
+  <title>Yahtzee</title>
 </head>
 
 <body>
+  <main>
+    <div class="total-score">
+      <p>Score: <span id="ttlscore"></span> </p>
+    </div>
+    <article class="scores">
+      <section class="upper">
+        <div id="1">
+          <span>Ones</span>
+          <span id="pu1" class="box player"></span>
+          <span id="cu1" class="box"></span>
+        </div>
+        <div id="2">
+          <span>Twos</span>
+          <span id="pu2" class="box player"></span>
+          <span id="cu2" class="box"></span>
+        </div>
+        <div id="3">
+          <span>Threes</span>
+          <span id="pu3" class="box player"></span>
+          <span id="cu3" class="box"></span>
+        </div>
+        <div id="4">
+          <span>Fours</span>
+          <span id="pu4" class="box player"></span>
+          <span id="cu4" class="box"></span>
+        </div>
+        <div id="5">
+          <span>Fives</span>
+          <span id="pu5" class="box player"></span>
+          <span id="cu5" class="box"></span>
+        </div>
+        <div id="6">
+          <span>Sixes</span>
+          <span id="pu6" class="box player"></span>
+          <span id="cu6" class="box"></span>
+        </div>
+      </section>
+      <section class="lower">
+        <div id="x3">
+          <span>Three of a Kind</span>
+          <span id="px3" class="box player"></span>
+          <span id="cx3" class="box"></span>
+        </div>
+        <div id="x4">
+          <span>Four of a Kind</span>
+          <span id="px4" class="box player"></span>
+          <span id="cx4" class="box"></span>
+        </div>
+        <div id="fh">
+          <span>Fullhouse</span>
+          <span id="pfh" class="box player"></span>
+          <span id="cfh" class="box"></span>
+        </div>
+        <div id="ss">
+          <span>Small Straight</span>
+          <span id="pss" class="box player"></span>
+          <span id="css" class="box"></span>
+        </div>
+        <div id="ls">
+          <span>Large Straight</span>
+          <span id="pls" class="box player"></span>
+          <span id="cls" class="box"></span>
+        </div>
+        <div id="x5">
+          <span>Yahtzee</span>
+          <span id="px5" class="box player"></span>
+          <span id="cx5" class="box"></span>
+        </div>
+      </section>
+    </article>
 
-  <script src="index.js"></script>
+    <article class="bonus">
+      <section id="bs">bonus: <span class="bonus-num">0 / 63</span> </section>
+      <section id="ch">
+        <span>Chance</span>
+        <span id="pch" class="box player"></span>
+        <span id="cch" class="box"></span>
+      </section>
+    </article>
+    <article id="rolls">
+      <section class="dice-area">
+        <div id="rd1" class="dice dbox"></div>
+        <div id="rd2" class="dice dbox"></div>
+        <div id="rd3" class="dice dbox"></div>
+        <div id="rd4" class="dice dbox"></div>
+        <div id="rd5" class="dice dbox"></div>
+      </section>
+      <section id="roll-play">
+        <div id="roll">ROLL</div>
+        <div id="score">PLAY</div>
+      </section>
+    </article>
+  </main>
 </body>
-
+<script type="module" src="index.js"></script>
 </html>
