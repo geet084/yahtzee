@@ -62,3 +62,7 @@ article {
   justify-content: center;
   align-items: center;
 }
+
+.done {
+  color: lightgrey;
+}
