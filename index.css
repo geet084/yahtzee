@@ -66,3 +66,230 @@ article {
 .done {
   color: lightgrey;
 }
+
+
+.dice-row {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.die {
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+  border-radius: 5px;
+  display: flex;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.pip {
+  background-color: black;
+  margin: 3px;
+  padding: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.one {
+  justify-content: center;
+  align-items: center;
+}
+
+.two {
+  justify-content: space-between;
+}
+
+.two .pip:nth-of-type(2) {
+  align-self: flex-end;
+}
+
+.three {
+  justify-content: space-between;
+}
+
+.three .pip.pip:nth-of-type(2) {
+  align-self: center;
+}
+
+.three .pip:nth-of-type(3) {
+  align-self: flex-end;
+}
+
+.four {
+  justify-content: space-between;
+}
+
+.five {
+  justify-content: space-between;
+}
+
+.five .pip:nth-of-type(1) {
+  align-self: center;
+}
+
+.six {
+  justify-content: space-between;
+}
+
+.x {
+  font-weight: 100;
+  font-size: smaller;
+  position: relative;
+  top: 1px;
+}
+
+.x3,
+.x4 {
+  font-weight: 900;
+  font-size: larger;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fh .peak {
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid black;
+  width: 0;
+  height: 0;
+}
+
+.fh .chimney {
+  height: 15px;
+  width: 4px;
+  background-color: black;
+  position: relative;
+  top: 10px;
+  left: -8px;
+}
+
+.fh .base {
+  background-color: black;
+  width: 20px;
+  height: 15px;
+}
+
+.fh .door {
+  background-color: white;
+  width: 6px;
+  height: 15px;
+  position: relative;
+  bottom: 8px;
+  left: 2px;
+}
+
+.ss .card {
+  width: 13px;
+  height: 18px;
+  position: relative;
+  border-radius: 2px;
+  border: 1px solid black;
+  background-color: #fff;
+}
+
+.ss .card1 {
+  top: 12px;
+  left: 8px;
+  transform: rotate(-125deg);
+}
+
+.ss .card2 {
+  top: 4px;
+  left: 10px;
+  transform: rotate(-110deg);
+}
+
+.ss .card3 {
+  top: -3px;
+  left: 13px;
+  transform: rotate(-95deg);
+}
+
+.ss .card4 {
+  top: -9px;
+  left: 16px;
+  transform: rotate(-75deg);
+}
+
+.ss {
+  display: flex;
+  flex-direction: column;
+}
+
+.straight {
+  position: relative;
+  background-color: #fff;
+  bottom: 7px;
+  left: 2px;
+  font-size: 0.65rem;
+}
+
+.ls {
+  display: flex;
+  flex-direction: column;
+}
+
+.ls .card {
+  width: 8px;
+  height: 18px;
+  position: relative;
+  border-radius: 1.5px;
+  border: 1px solid black;
+  background-color: #fff;
+}
+
+.ls .card1 {
+  top: 14px;
+  left: 7px;
+  transform: rotate(-125deg);
+}
+
+.ls .card2 {
+  top: 7px;
+  left: 10px;
+  transform: rotate(-110deg);
+}
+
+.ls .card3 {
+  top: 1px;
+  left: 13px;
+  transform: rotate(-95deg);
+}
+
+.ls .card4 {
+  top: -5px;
+  left: 16px;
+  transform: rotate(-75deg);
+}
+
+.ls .card5 {
+  top: -9px;
+  left: 19px;
+  transform: rotate(-60deg);
+}
+
+.yahtzee {
+  font-size: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-45deg);
+}
