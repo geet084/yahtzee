@@ -49,7 +49,7 @@ function scoreLargeStraight(scoreMap) {
 
 function scoreSmallStraight(scoreMap) {
   const options = [[1, 2, 3, 4], [2, 3, 4, 5], [3, 4, 5, 6]];
-  return isStraight(options, scoreMap) ? 25 : 0;
+  return isStraight(options, scoreMap) ? 30 : 0;
 }
 
 function isStraight(options, scoreMap) {
