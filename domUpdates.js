@@ -32,14 +32,26 @@ export function updateDiceArea(dice, count) {
   getDOMArray('.dice').map((die, i) => {
     die.innerText = dice[i]
   })
-  if (count === 3) select('#roll').classList.add('done')
+  const rollCount = select(`.roll-${count}`)
+  rollCount.classList.add('roll-count')
+  rollCount.innerText = count
+  if (count === 3) {
+    select('#roll').classList.add('done')
+    select('#roll').classList.remove('avail-btn')
+  }
 }
 
 export function nextTurn() {
   resetDice()
   select('#roll').classList.remove('done')
+  select('#roll').classList.add('avail-btn')
   select('#score').classList.add('done')
+  select('#score').classList.remove('avail-btn')
   select('#score').removeEventListener('click', index.handleScore)
+  getDOMArray('.rolls').map(box => {
+    box.classList.remove('roll-count')
+    box.innerText = ""
+  })
 }
 
 export function resetDice() {
@@ -56,7 +68,7 @@ export function checkForUpperBonus() {
     const value = parseInt(box.innerText)
     if (value >= 0) upperTotal += value
   })
-  select('.bonus-num').innerText = `${upperTotal} / 63`
+  select('.p-bonus-num').innerText = `${upperTotal} / 63`
   index.handleBonus(upperTotal)
 }
 
@@ -69,6 +81,7 @@ export function endGame() {
 function scoreBox({ target }) {
   clearLastBox()
   select('#score').classList.remove('done')
+  select('#score').classList.add('avail-btn')
   select('#score').addEventListener('click', index.handleScore)
   if (!target.classList.contains('scored')) {
     target.innerText = index.getRolledPoints(target.id);
