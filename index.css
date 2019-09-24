@@ -1,5 +1,11 @@
-main {
+body {
+  margin: auto;
+  height: 100%;
   background-color: rgba(35, 215, 26, 0.468);
+}
+
+body, main {
+  overflow: hidden;
 }
 
 article {
@@ -7,8 +13,10 @@ article {
   justify-content: space-around;
   padding: 5px;
 }
+
 .total-score {
-  height: 40px;
+  height: 7.5vh;
+  font-size: 2rem;
   background-color: rgba(35, 215, 26, 0.468);
   display: flex;
   justify-content: center;
@@ -31,16 +39,16 @@ article {
 }
 
 .bonus-title {
-  width: 50px;
+  width: 14.5vw;
   position: relative;
-  left: 3px;
+  margin-right: 2px;
 }
 
 .p-bonus-num,
 .c-bonus-num {
   margin: 5px;
-  width: 40px;
-  height: 40px;
+  height: 12vw;
+  width: 12vw;
   background-color: rgb(215, 246, 210);
   display: flex;
   border-radius: 3px;
@@ -70,6 +78,7 @@ article {
 
 .dice-area {
   display: flex;
+  margin: 1.5vh auto;
   flex-direction: row;
   justify-content: space-around;
 }
@@ -87,7 +96,7 @@ article {
 #roll-play {
   display: flex;
   justify-content: space-around;
-  margin: 10px;
+  margin: 10px 0;
 }
 
 #roll-play div {
@@ -98,7 +107,8 @@ article {
 }
 
 #roll-play #roll {
-  padding: 5px;
+  padding: 2vw;
+  /* padding: 5px; */
   display: flex;
   justify-content: space-around;
 }
@@ -108,9 +118,9 @@ article {
 }
 
 .rolls {
-  background-color:rgba(35, 215, 26, 0.468);
+  background-color: rgba(35, 215, 26, 0.468);
   border-radius: 3px;
-  width: 10px;
+  width: 3.5vw;
   margin: 7px 7px;
 }
 
@@ -118,7 +128,7 @@ article {
   color: red;
   background-color: rgb(215, 246, 210);
   border-radius: 3px;
-  width: 10px;
+  width: 4vw;
   height: 10px;
   display: flex;
   align-items: center;
@@ -133,18 +143,27 @@ article {
   justify-content: center;
   align-items: center;
   font-size: 1.4rem;
+  width: 30vw;
 }
 
 .box,
 .dbox {
   background-color: rgba(255, 255, 255, 0.523);
   border-radius: 3px;
-  height: 40px;
-  width: 40px;
   margin: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.box {
+  height: 12vw;
+  width: 12vw;
+}
+
+.dbox {
+  height: 15vw;
+  width: 15vw;
 }
 
 .done {
@@ -152,15 +171,15 @@ article {
 }
 
 .dice-row {
-  height: 52px;
+  height: 9vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
 .die {
-  width: 40px;
-  height: 40px;
+  height: 12vw;
+  width: 12vw;
   padding: 2px;
   border-radius: 5px;
   display: flex;
