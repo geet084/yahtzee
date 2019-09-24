@@ -36,12 +36,22 @@ article {
   font-size: 0.8rem;
   position: relative;
   left: -5px;
+  background-color: #6be264;
+  border-radius: 3px;
 }
 
 .bonus-title {
-  width: 14.5vw;
+  width: 12.5vw;
   position: relative;
-  margin-right: 2px;
+  margin: 0 5px;
+}
+
+.bonus-points {
+  font-size: 1rem;
+  font-weight: 900;
+  margin-left: 15px;
+  color: yellow;
+  text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px .5px 0 #000, .5px .5px 0 #000;
 }
 
 .p-bonus-num,
@@ -84,7 +94,7 @@ article {
 }
 
 .held {
-  color: #069b18;
+  color: #005a0b;
   box-shadow: 0px 0px 4px 2px rgb(44, 44, 44);
 }
 
@@ -108,7 +118,6 @@ article {
 
 #roll-play #roll {
   padding: 2vw;
-  /* padding: 5px; */
   display: flex;
   justify-content: space-around;
 }
@@ -125,7 +134,7 @@ article {
 }
 
 .roll-count {
-  color: red;
+  color: black;
   background-color: rgb(215, 246, 210);
   border-radius: 3px;
   width: 4vw;
@@ -164,6 +173,18 @@ article {
 .dbox {
   height: 15vw;
   width: 15vw;
+}
+
+.player, .comp {
+  box-shadow: 2px 2px 5px -1px rgb(0, 0, 0);
+}
+
+.comp {
+  visibility: hidden;
+}
+
+.scored {
+  box-shadow: 0px 0px 4px 2px rgb(151, 236, 148);
 }
 
 .done {
