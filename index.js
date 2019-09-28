@@ -34,5 +34,10 @@ export function getRolledPoints(target) {
 }
 
 function checkForGameEnd() {
-  if (game.round === 0) dom.endGame()
+  if (game.round === 0) {
+    const score = game.updateScore()
+    dom.checkForUpperBonus()
+    dom.updateScore(score)
+    dom.endGame()
+  }
 }
