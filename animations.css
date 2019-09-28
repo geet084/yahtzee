@@ -1,0 +1,1539 @@
+.bounce {
+  animation: bounceIn 0.4s;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-pu1-b0 {
+  animation: slide1B1 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pu1-b1 {
+  animation: slide1B2 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pu1-b2 {
+  animation: slide1B3 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pu1-b3 {
+  animation: slide1B4 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pu1-b4 {
+  animation: slide1B5 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+
+@keyframes slide1B1 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 50px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 45px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slide1B2 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 100px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 45px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slide1B3 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 150px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 45px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slide1B4 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 200px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 45px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slide1B5 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 250px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 45px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+
+.animate-pu2-b0 {
+  animation: slide2B1 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pu2-b1 {
+  animation: slide2B2 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pu2-b2 {
+  animation: slide2B3 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pu2-b3 {
+  animation: slide2B4 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pu2-b4 {
+  animation: slide2B5 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+
+@keyframes slide2B1 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 50px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 95px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slide2B2 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 100px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 95px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slide2B3 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 150px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 95px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slide2B4 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 200px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 95px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slide2B5 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 250px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 95px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+
+.animate-pu3-b0 {
+  animation: slide3B1 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pu3-b1 {
+  animation: slide3B2 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pu3-b2 {
+  animation: slide3B3 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pu3-b3 {
+  animation: slide3B4 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pu3-b4 {
+  animation: slide3B5 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+
+@keyframes slide3B1 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 50px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 150px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slide3B2 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 100px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 150px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slide3B3 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 150px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 150px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slide3B4 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 200px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 150px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slide3B5 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 250px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 150px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+
+.animate-pu4-b0 {
+  animation: slide4B1 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pu4-b1 {
+  animation: slide4B2 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pu4-b2 {
+  animation: slide4B3 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pu4-b3 {
+  animation: slide4B4 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pu4-b4 {
+  animation: slide4B5 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+
+@keyframes slide4B1 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 50px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 205px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slide4B2 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 100px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 205px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slide4B3 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 150px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 205px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slide4B4 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 200px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 205px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slide4B5 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 250px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 205px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+
+.animate-pu5-b0 {
+  animation: slide5B1 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pu5-b1 {
+  animation: slide5B2 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pu5-b2 {
+  animation: slide5B3 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pu5-b3 {
+  animation: slide5B4 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pu5-b4 {
+  animation: slide5B5 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+
+@keyframes slide5B1 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 50px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 250px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slide5B2 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 100px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 250px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slide5B3 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 150px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 250px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slide5B4 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 200px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 250px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slide5B5 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 250px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 250px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+
+.animate-pu6-b0 {
+  animation: slide6B1 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pu6-b1 {
+  animation: slide6B2 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pu6-b2 {
+  animation: slide6B3 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pu6-b3 {
+  animation: slide6B4 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pu6-b4 {
+  animation: slide6B5 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+
+@keyframes slide6B1 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 50px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 300px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slide6B2 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 100px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 300px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slide6B3 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 150px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 300px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slide6B4 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 200px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 300px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slide6B5 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 250px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 300px;
+    left: 62px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+
+
+.animate-px3-b0 {
+  animation: slideX3B1 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-px3-b1 {
+  animation: slideX3B2 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-px3-b2 {
+  animation: slideX3B3 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-px3-b3 {
+  animation: slideX3B4 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-px3-b4 {
+  animation: slideX3B5 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+
+@keyframes slideX3B1 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 50px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 45px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideX3B2 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 100px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 45px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideX3B3 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 150px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 45px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideX3B4 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 200px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 45px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideX3B5 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 250px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 45px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+
+.animate-px4-b0 {
+  animation: slideX4B1 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-px4-b1 {
+  animation: slideX4B2 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-px4-b2 {
+  animation: slideX4B3 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-px4-b3 {
+  animation: slideX4B4 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-px4-b4 {
+  animation: slideX4B5 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+
+@keyframes slideX4B1 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 50px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 95px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideX4B2 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 100px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 95px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideX4B3 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 150px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 95px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideX4B4 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 200px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 95px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideX4B5 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 250px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 95px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+
+.animate-pfh-b0 {
+  animation: slideFHB1 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pfh-b1 {
+  animation: slideFHB2 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pfh-b2 {
+  animation: slideFHB3 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pfh-b3 {
+  animation: slideFHB4 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pfh-b4 {
+  animation: slideFHB5 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+
+@keyframes slideFHB1 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 50px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 150px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideFHB2 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 100px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 150px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideFHB3 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 150px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 150px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideFHB4 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 200px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 150px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideFHB5 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 250px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 150px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+
+.animate-pss-b0 {
+  animation: slideSSB1 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pss-b1 {
+  animation: slideSSB2 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pss-b2 {
+  animation: slideSSB3 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pss-b3 {
+  animation: slideSSB4 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pss-b4 {
+  animation: slideSSB5 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+
+@keyframes slideSSB1 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 50px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 205px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideSSB2 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 100px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 205px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideSSB3 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 150px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 205px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideSSB4 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 200px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 205px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideSSB5 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 250px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 205px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+
+.animate-pls-b0 {
+  animation: slideLSB1 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pls-b1 {
+  animation: slideLSB2 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pls-b2 {
+  animation: slideLSB3 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pls-b3 {
+  animation: slideLSB4 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pls-b4 {
+  animation: slideLSB5 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+
+@keyframes slideLSB1 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 50px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 250px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideLSB2 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 100px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 250px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideLSB3 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 150px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 250px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideLSB4 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 200px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 250px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideLSB5 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 250px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 250px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+
+.animate-px5-b0 {
+  animation: slideX5B1 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-px5-b1 {
+  animation: slideX5B2 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-px5-b2 {
+  animation: slideX5B3 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-px5-b3 {
+  animation: slideX5B4 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-px5-b4 {
+  animation: slideX5B5 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+
+@keyframes slideX5B1 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 50px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 300px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideX5B2 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 100px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 300px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideX5B3 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 150px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 300px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideX5B4 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 200px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 300px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideX5B5 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 250px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 300px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+
+.animate-pch-b0 {
+  animation: slideCHB1 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pch-b1 {
+  animation: slideCHB2 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pch-b2 {
+  animation: slideCHB3 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pch-b3 {
+  animation: slideCHB4 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+.animate-pch-b4 {
+  animation: slideCHB5 1.5s;
+  transition: all 0.3s ease-out;
+  color: red;
+  position: absolute;
+}
+
+@keyframes slideCHB1 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 50px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 360px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideCHB2 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 100px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 360px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideCHB3 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 150px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 360px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideCHB4 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 200px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 360px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+@keyframes slideCHB5 {
+  0% {
+    transform: scale(1.05);
+    top: 500px;
+    left: 250px;
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(0.5);
+    top: 360px;
+    left: 212px;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
