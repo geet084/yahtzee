@@ -1,10 +1,13 @@
+@import './animations.css';
+
 body {
   margin: auto;
   height: 100%;
   background-color: rgba(35, 215, 26, 0.468);
 }
 
-body, main {
+body,
+main {
   overflow: hidden;
 }
 
@@ -51,7 +54,7 @@ article {
   font-weight: 900;
   margin-left: 15px;
   color: yellow;
-  text-shadow: -.5px -.5px 0 #000, .5px -.5px 0 #000, -.5px .5px 0 #000, .5px .5px 0 #000;
+  text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
 }
 
 .p-bonus-num,
@@ -163,6 +166,7 @@ article {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .box {
@@ -175,7 +179,8 @@ article {
   width: 15vw;
 }
 
-.player, .comp {
+.player,
+.comp {
   box-shadow: 2px 2px 5px -1px rgb(0, 0, 0);
 }
 
@@ -415,4 +420,111 @@ article {
   justify-content: center;
   align-items: center;
   transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 450px) {
+  .box,
+  .die,
+  .p-bonus-num,
+  .c-bonus-num {
+    height: 9vw;
+    width: 9vw;
+    border-radius: 5px;
+    margin: auto 1vw;
+    font-size: 2rem;
+  }
+
+  .pip {
+    height: 1.5vw;
+    width: 1.5vw;
+    margin: 5px;
+  }
+
+  .yahtzee {
+    font-size: .8rem;
+  }
+
+  .chance-title {
+    font-size: 6vw;
+  }
+
+  .bonus-title {
+    font-size: 1.5rem;
+    width: 11vw;
+  }
+
+  .bonus-points {
+    font-size: 1.75rem;
+    margin-left: 20px;
+  }
+
+  .scored,
+  .box {
+    font-size: 1.95rem;
+  }
+  
+  .p-bonus-num,
+  .c-bonus-num {
+    font-size: 1.5rem;
+  }
+
+  .dbox {
+    font-size: 2rem;
+    border-radius: 5px;
+    margin: 0 15px;
+  }
+
+  .rolls, .roll-count {
+    width: 1.5vw;
+    height: 1.5vw;
+  }
+
+  .roll-count {
+    font-size: 1.5rem;
+  }
+
+  .roll-title, #score {
+    font-size: 2.5rem;
+  }
+
+  .roll-title {
+    margin-top: -10px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .box,
+  .die,
+  .p-bonus-num,
+  .c-bonus-num {
+    height: 55px;
+    width: 55px;
+    border-radius: 5px;
+    margin: auto 1vw;
+    font-size: 1.25rem;
+  }
+
+  .bonus-title, .bonus-points {
+    font-size: 1.25rem;
+    width: 75px;
+  }
+
+  .dbox {
+    height: 80px;
+    width: 80px;
+  }
+
+  #roll-play #roll {
+    padding: .5vw;
+  }
+  
+  .roll-title {
+    margin-top: -5px;
+  }
+
+  .pip {
+    height: 1vw;
+    width: 1vw;
+    margin: 5px;
+  }
 }
