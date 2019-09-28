@@ -105,9 +105,15 @@ export function checkForUpperBonus() {
 }
 
 export function endGame() {
+  select('#rolls').style.display = 'none'
+  select('.restart-game').addEventListener('click', restartGame)
   select('#roll').classList.add('done')
   select('#score').classList.add('done')
   alert('GAME OVER')
+}
+
+function restartGame() {
+  document.location.reload();
 }
 
 function scoreBox({ target }) {

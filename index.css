@@ -17,6 +17,21 @@ article {
   padding: 5px;
 }
 
+.restart-game {
+  display: flex;
+  height: 18vh;;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#restart {
+  background-color: #cff5cc;
+  font-size: 2rem;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 1.5vh auto;
+}
+
 .total-score {
   height: 7.5vh;
   font-size: 2rem;
