@@ -23,13 +23,28 @@ export function removeScoreBoxEventListeners() {
 export function updateScore(score) {
   select('#ttlscore').innerText = score
   const target = select('.hold')
-  target.classList.remove('hold')
-  target.classList.add('scored')
+  if (target) {
+    animateDice(target)
+    target.classList.remove('hold')
+    target.classList.add('scored')
+  }
   removeScoreBoxEventListeners()
+}
+
+function animateDice(target) {
+  getDOMArray('.dice').map((die, i) => {
+    let moveDie = die.cloneNode(true)
+    moveDie.setAttribute('id', `m${die.id}`)
+    moveDie.classList.add('moved')
+    moveDie.innerText = die.innerText
+    document.querySelector('.dice-area').appendChild(moveDie)
+    moveDie.classList.add(`animate-${target.id}-b${i}`)
+  })
 }
 
 export function updateDiceArea(dice, count) {
   getDOMArray('.dice').map((die, i) => {
+    if (!die.classList.contains('held')) die.classList.add('bounce')
     die.innerText = dice[i]
   })
   const rollCount = select(`.roll-${count}`)
@@ -39,6 +54,12 @@ export function updateDiceArea(dice, count) {
     select('#roll').classList.add('done')
     select('#roll').classList.remove('avail-btn')
   }
+
+  setTimeout(() => {
+    getDOMArray('.dice').map(die => {
+      die.classList.remove('bounce')
+    })
+  }, 300);
 }
 
 export function nextTurn() {
@@ -56,9 +77,20 @@ export function nextTurn() {
 
 export function resetDice() {
   getDOMArray('.dbox').map(die => {
-    die.innerText = ''
-    die.classList.remove('held')
+    if (!die.classList.contains('moved')) resetDie(die);
   })
+
+  setTimeout(() => {
+    getDOMArray('.dbox').map(die => {
+      resetDie(die);
+      if (die.classList.contains('moved')) die.remove()
+    })
+  }, 1300);
+
+  function resetDie(die) {
+    die.innerText = '';
+    die.classList.remove('held');
+  }
 }
 
 export function checkForUpperBonus() {
