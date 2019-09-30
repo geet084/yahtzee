@@ -34,11 +34,23 @@ export function updateScore(score) {
 function animateDice(target) {
   getDOMArray('.dice').map((die, i) => {
     let moveDie = die.cloneNode(true)
+
+    let root = document.documentElement.style;
+    let targetBox = document.getElementById(target.id)
+
+    let distTop = targetBox.offsetTop - (targetBox.offsetWidth / 2);
+    let distLeft = targetBox.offsetLeft - (targetBox.offsetWidth / 2);
+
+    root.setProperty('--dest-box-top', distTop + 'px')
+    root.setProperty('--dest-box-left', distLeft + 'px')
+    root.setProperty('--dice-top', die.offsetTop + 'px')
+    root.setProperty(`--dice-${i + 1}-left`, die.offsetLeft + 'px')
+
     moveDie.setAttribute('id', `m${die.id}`)
     moveDie.classList.add('moved')
     moveDie.innerText = die.innerText
     document.querySelector('.dice-area').appendChild(moveDie)
-    moveDie.classList.add(`animate-${target.id}-b${i}`)
+    moveDie.classList.add(`animate-dice-${i + 1}`)
   })
 }
 
