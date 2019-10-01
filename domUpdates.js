@@ -5,7 +5,7 @@ const getDOMArray = (selector) => {
   return Array.from(document.querySelectorAll(selector));
 };
 
-select('#rolls').addEventListener('click', handleClick)
+select('.btm-section').addEventListener('click', handleClick)
 
 export function addScoreBoxEventListeners() {
   getDOMArray('.player').map(box => {
@@ -38,9 +38,12 @@ function animateDice(target) {
     let root = document.documentElement.style;
     let targetBox = document.getElementById(target.id)
 
-    let distTop = targetBox.offsetTop - (targetBox.offsetWidth / 2);
-    let distLeft = targetBox.offsetLeft - (targetBox.offsetWidth / 2);
+    let vSpacer = window.outerHeight > 900 ? 20 : 10
+    let hSpacer = window.outerWidth > 700 ? 30 : 10
 
+    let distTop = targetBox.offsetTop - vSpacer;
+    let distLeft = targetBox.offsetLeft - hSpacer;
+    
     root.setProperty('--dest-box-top', distTop + 'px')
     root.setProperty('--dest-box-left', distLeft + 'px')
     root.setProperty('--dice-top', die.offsetTop + 'px')
@@ -78,9 +81,9 @@ export function nextTurn() {
   resetDice()
   select('#roll').classList.remove('done')
   select('#roll').classList.add('avail-btn')
-  select('#score').classList.add('done')
-  select('#score').classList.remove('avail-btn')
-  select('#score').removeEventListener('click', index.handleScore)
+  select('.score').classList.add('done')
+  select('.score').classList.remove('avail-btn')
+  select('.score').removeEventListener('click', index.handleScore)
   getDOMArray('.rolls').map(box => {
     box.classList.remove('roll-count')
     box.innerText = ""
@@ -108,19 +111,20 @@ export function resetDice() {
 export function checkForUpperBonus() {
   let upperTotal = 0
 
-  getDOMArray('.upper').map(box => {
+  getDOMArray('.player').map(box => {
     const value = parseInt(box.innerText)
-    if (value >= 0) upperTotal += value
+    const isUpper = box.id.includes('u')
+    if (value >= 0 && isUpper) upperTotal += value
   })
   select('.p-bonus-num').innerText = `${upperTotal} / 63`
   index.handleBonus(upperTotal)
 }
 
 export function endGame() {
-  select('#rolls').style.display = 'none'
+  select('.btm-section').style.display = 'none'
   select('.restart-game').addEventListener('click', restartGame)
   select('#roll').classList.add('done')
-  select('#score').classList.add('done')
+  select('.score').classList.add('done')
   alert('GAME OVER')
 }
 
@@ -130,9 +134,9 @@ function restartGame() {
 
 function scoreBox({ target }) {
   clearLastBox()
-  select('#score').classList.remove('done')
-  select('#score').classList.add('avail-btn')
-  select('#score').addEventListener('click', index.handleScore)
+  select('.score').classList.remove('done')
+  select('.score').classList.add('avail-btn')
+  select('.score').addEventListener('click', index.handleScore)
   if (!target.classList.contains('scored')) {
     target.innerText = index.getRolledPoints(target.id);
   }
