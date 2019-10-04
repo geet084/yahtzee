@@ -16,23 +16,23 @@ self.addEventListener("install", function (event) {
            after making HTTP requests for each of them.
         */
         return cache.addAll([
-          '/',
-          '/images/icon-72.png',
-          '/images/icon-96.png',
-          '/images/icon-128.png',
-          '/images/icon-144.png',
-          '/images/icon-152.png',
-          '/images/icon-192.png',
-          '/images/icon-384.png',
-          '/images/icon-512.png',
-          '/animations.css',
-          '/domUpdates.js',
-          '/game.js',
-          '/index.css',
-          '/index.html',
-          '/index.js',
-          '/player.js',
-          '/points.js',
+          './',
+          './images/icon-72.png',
+          './images/icon-96.png',
+          './images/icon-128.png',
+          './images/icon-144.png',
+          './images/icon-152.png',
+          './images/icon-192.png',
+          './images/icon-384.png',
+          './images/icon-512.png',
+          './animations.css',
+          './domUpdates.js',
+          './game.js',
+          './index.css',
+          './index.html',
+          './index.js',
+          './player.js',
+          './points.js',
         ]);
       })
       .then(function () {
@@ -40,6 +40,13 @@ self.addEventListener("install", function (event) {
       })
   );
 });
+// self.addEventListener('fetch', function (event) {
+//   event.respondWith(
+//     fetch(event.request).catch(function () {
+//       return caches.match(event.request);
+//     })
+//   );
+// });
 
 self.addEventListener('fetch', function (event) {
   console.log(event.request.url);
