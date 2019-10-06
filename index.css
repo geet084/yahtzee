@@ -24,7 +24,7 @@ article {
   justify-content: space-around;
 }
 
-#restart {
+.restart {
   background-color: #cff5cc;
   font-size: 2rem;
   padding: 20px;
