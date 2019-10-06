@@ -134,7 +134,7 @@ article {
   margin: 0 10px;
 }
 
-.roll-play #roll {
+.roll-play .roll {
   padding: 2vw;
   display: flex;
   justify-content: space-around;
@@ -511,7 +511,7 @@ article {
     width: 80px;
   }
 
-  .roll-play #roll {
+  .roll-play .roll {
     padding: .5vw;
   }
   
