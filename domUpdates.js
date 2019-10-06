@@ -66,8 +66,8 @@ export function updateDiceArea(dice, count) {
   rollCount.classList.add('roll-count')
   rollCount.innerText = count
   if (count === 3) {
-    select('#roll').classList.add('done')
-    select('#roll').classList.remove('avail-btn')
+    select('.roll').classList.add('done')
+    select('.roll').classList.remove('avail-btn')
   }
 
   setTimeout(() => {
@@ -79,8 +79,8 @@ export function updateDiceArea(dice, count) {
 
 export function nextTurn() {
   resetDice()
-  select('#roll').classList.remove('done')
-  select('#roll').classList.add('avail-btn')
+  select('.roll').classList.remove('done')
+  select('.roll').classList.add('avail-btn')
   select('.score').classList.add('done')
   select('.score').classList.remove('avail-btn')
   select('.score').removeEventListener('click', index.handleScore)
@@ -123,7 +123,7 @@ export function checkForUpperBonus() {
 export function endGame() {
   select('.btm-section').style.display = 'none'
   select('.restart-game').addEventListener('click', restartGame)
-  select('#roll').classList.add('done')
+  select('.roll').classList.add('done')
   select('.score').classList.add('done')
   alert('GAME OVER')
 }
@@ -145,7 +145,7 @@ function scoreBox({ target }) {
 
 function handleClick({ target }) {
   if (target.id.includes('rd')) handleDice(target);
-  if (target.id === 'roll') index.handleRoll();
+  if (target.classList.contains('roll')) index.handleRoll();
 }
 
 function handleDice({ id, classList, innerText }) {
