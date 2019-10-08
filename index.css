@@ -1,6 +1,7 @@
 @import './animations.css';
 
 :root {
+  --vh: 1vh;
   --primary-light: #ffffff85;
   --primary-medium: #7395ae;
   --primary-dark: #547a95;
@@ -11,7 +12,8 @@
 
 body {
   margin: auto;
-  height: 100%;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   background-color: var(--primary-dark);
 }
 

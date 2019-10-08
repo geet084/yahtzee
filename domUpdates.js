@@ -1,5 +1,12 @@
 import * as index from './index.js';
 
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+window.addEventListener('resize', () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+
 const select = (selector) => document.querySelector(selector);
 const getDOMArray = (selector) => {
   return Array.from(document.querySelectorAll(selector));
