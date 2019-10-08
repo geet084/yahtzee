@@ -30,124 +30,124 @@
 .animate-dice-1 {
   animation: slideDice1 1.5s;
   transition: all 0.3s ease-out;
-  color: red;
   position: absolute;
 }
 
 .animate-dice-2 {
   animation: slideDice2 1.5s;
   transition: all 0.3s ease-out;
-  color: red;
   position: absolute;
 }
 
 .animate-dice-3 {
   animation: slideDice3 1.5s;
   transition: all 0.3s ease-out;
-  color: red;
   position: absolute;
 }
 
 .animate-dice-4 {
   animation: slideDice4 1.5s;
   transition: all 0.3s ease-out;
-  color: red;
   position: absolute;
 }
 
 .animate-dice-5 {
   animation: slideDice5 1.5s;
   transition: all 0.3s ease-out;
-  color: red;
   position: absolute;
 }
 
 @keyframes slideDice1 {
   0% {
+    background-color: #aebfcc;
     transform: scale(1.05);
     top: var(--dice-top);
     left: var(--dice-1-left);
   }
   90% {
-    opacity: 0.5;
     transform: scale(0.5);
     top: var(--dest-box-top);
     left: var(--dest-box-left);
   }
   100% {
-    opacity: 0.1;
+    opacity: 0.01;
     transform: scale(0);
+    color: #aebfcc;
   }
 }
 
 @keyframes slideDice2 {
   0% {
+    background-color: #aebfcc;
     transform: scale(1.05);
     top: var(--dice-top);
     left: var(--dice-2-left);
   }
   90% {
-    opacity: 0.5;
     transform: scale(0.5);
     top: var(--dest-box-top);
     left: var(--dest-box-left);
   }
   100% {
-    opacity: 0.1;
+    opacity: 0.01;
     transform: scale(0);
+    color: #aebfcc;
   }
 }
 
 @keyframes slideDice3 {
   0% {
+    background-color: #aebfcc;
     transform: scale(1.05);
     top: var(--dice-top);
     left: var(--dice-3-left);
   }
   90% {
-    opacity: 0.5;
     transform: scale(0.5);
     top: var(--dest-box-top);
     left: var(--dest-box-left);
   }
   100% {
-    opacity: 0.1;
+    opacity: 0.01;
     transform: scale(0);
+    color: #aebfcc;
   }
 }
 
 @keyframes slideDice4 {
   0% {
+    background-color: #aebfcc;
     transform: scale(1.05);
     top: var(--dice-top);
     left: var(--dice-4-left);
   }
   90% {
-    opacity: 0.5;
     transform: scale(0.5);
     top: var(--dest-box-top);
     left: var(--dest-box-left);
   }
   100% {
-    opacity: 0.1;
+    opacity: 0.01;
     transform: scale(0);
+    color: #aebfcc;
   }
 }
 
 @keyframes slideDice5 {
   0% {
+    background-color: #aebfcc;
     transform: scale(1.05);
     top: var(--dice-top);
     left: var(--dice-5-left);
   }
   90% {
-    opacity: 0.5;
     transform: scale(0.5);
     top: var(--dest-box-top);
     left: var(--dest-box-left);
   }
   100% {
-    opacity: 0.1;
+    opacity: 0.01;
     transform: scale(0);
+    color: #aebfcc;
   }
 }
