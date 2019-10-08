@@ -107,7 +107,6 @@ export function resetDice() {
 
   setTimeout(() => {
     getDOMArray('.dbox').map(die => {
-      resetDie(die);
       if (die.classList.contains('moved')) die.remove()
     })
   }, 1300);
