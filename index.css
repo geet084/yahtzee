@@ -13,11 +13,6 @@ body {
   margin: auto;
   height: 100%;
   background-color: var(--primary-dark);
-  touch-action: none;
-}
-
-main {
-  touch-action: pan-y;
 }
 
 body,
