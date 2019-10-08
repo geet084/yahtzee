@@ -16,6 +16,10 @@ body {
   touch-action: none;
 }
 
+main {
+  touch-action: pan-y;
+}
+
 body,
 main {
   overflow: hidden;
@@ -55,7 +59,8 @@ article {
   margin: 1.5vh auto;
 }
 
-.restart, .end-return {
+.restart,
+.end-return {
   background-color: #fff;
   font-size: 2rem;
   padding: 2vw 10vw;
