@@ -28,7 +28,7 @@ article {
 
 .restart-game {
   display: flex;
-  height: 18vh;;
+  height: 18vh;
   align-items: center;
   justify-content: space-around;
 }
@@ -41,6 +41,10 @@ article {
   margin: 1.5vh auto;
 }
 
+.rolled {
+  box-shadow: 2px 2px 5px -1px rgb(0, 0, 0);
+}
+
 .total-score {
   height: 7.5vh;
   font-size: 2rem;
@@ -48,6 +52,7 @@ article {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px -5px 10px 5px rgba(0, 0, 0, 0.75);
 }
 
 .mid-section {
@@ -123,7 +128,7 @@ article {
 
 .held {
   color: #fff;
-  box-shadow: 0px 0px 4px 2px rgb(44, 44, 44);
+  box-shadow: 0px 0px 4px 2px var(--primary-dark);
 }
 
 .bottom-section #ch {
@@ -449,7 +454,7 @@ article {
   }
 
   .yahtzee {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   .chance-title {
@@ -470,7 +475,7 @@ article {
   .box {
     font-size: 1.95rem;
   }
-  
+
   .p-bonus-num,
   .c-bonus-num {
     font-size: 1.5rem;
@@ -482,7 +487,8 @@ article {
     margin: 0 15px;
   }
 
-  .rolls, .roll-count {
+  .rolls,
+  .roll-count {
     width: 1.5vw;
     height: 1.5vw;
   }
@@ -491,7 +497,8 @@ article {
     font-size: 1.5rem;
   }
 
-  .roll-title, .score {
+  .roll-title,
+  .score {
     font-size: 2.5rem;
   }
 
@@ -512,7 +519,8 @@ article {
     font-size: 1.25rem;
   }
 
-  .bonus-title, .bonus-points {
+  .bonus-title,
+  .bonus-points {
     font-size: 1.25rem;
     width: 75px;
   }
@@ -523,9 +531,9 @@ article {
   }
 
   .roll-play .roll {
-    padding: .5vw;
+    padding: 0.5vw;
   }
-  
+
   .roll-title {
     margin-top: -5px;
   }

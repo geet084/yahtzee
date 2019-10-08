@@ -88,6 +88,9 @@ export function nextTurn() {
     box.classList.remove('roll-count')
     box.innerText = ""
   })
+  getDOMArray('.dbox').map(die => {
+    die.classList.remove('rolled')
+  })
 }
 
 export function resetDice() {
@@ -145,7 +148,12 @@ function scoreBox({ target }) {
 
 function handleClick({ target }) {
   if (target.id.includes('rd')) handleDice(target);
-  if (target.classList.contains('roll')) index.handleRoll();
+  if (target.classList.contains('roll')) {
+    getDOMArray('.dbox').map(die => {
+      die.classList.add('rolled')
+    })
+    index.handleRoll();
+  }
 }
 
 function handleDice({ id, classList, innerText }) {
