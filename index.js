@@ -41,3 +41,7 @@ function checkForGameEnd() {
     dom.endGame()
   }
 }
+
+export function restartGame() {
+  game = new Game()
+}
