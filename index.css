@@ -26,33 +26,67 @@ article {
   padding: 5px;
 }
 
-.restart-game {
-  display: flex;
-  height: 18vh;
-  align-items: center;
-  justify-content: space-around;
+.main-splash {
+  text-align: center;
+  height: 100vh;
 }
 
-.restart {
+.main-splash img {
+  width: 50vw;
+  margin-top: 15vw;
+  border-radius: 5px;
+}
+
+.title {
+  margin: 2vw auto 25vw;
+}
+
+.hidden {
+  display: none;
+}
+
+.end-game {
+  display: flex;
+  flex-direction: column;
+}
+
+.start-game {
   background-color: #fff;
   font-size: 2rem;
-  padding: 20px;
+  padding: 2vw 10vw;
   border-radius: 5px;
   margin: 1.5vh auto;
+}
+
+.restart, .end-return {
+  background-color: #fff;
+  font-size: 2rem;
+  padding: 2vw 10vw;
+  border-radius: 5px;
+  margin: 1.5vh auto;
+  text-align: center;
 }
 
 .rolled {
   box-shadow: 2px 2px 5px -1px rgb(0, 0, 0);
 }
 
-.total-score {
+.header {
   height: 7.5vh;
   font-size: 2rem;
   background-color: var(--primary-medium);
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  padding: 0 10px;
   box-shadow: 0px -5px 10px 5px rgba(0, 0, 0, 0.75);
+}
+.return {
+  flex: 1;
+}
+
+.total-score {
+  flex: 2;
 }
 
 .mid-section {
@@ -121,7 +155,7 @@ article {
 
 .dice-area {
   display: flex;
-  margin: .5vh auto;
+  margin: 0.5vh auto;
   flex-direction: row;
   justify-content: space-around;
 }
