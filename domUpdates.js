@@ -135,7 +135,7 @@ export function checkForUpperBonus() {
 
 export function endGame() {
   select('.btm-section').style.display = 'none'
-  select('.end-game').style.display = 'block'
+  select('.end-game').style.display = 'contents'
   select('.roll').classList.add('done')
   select('.score').classList.add('done')
   alert('GAME OVER')
@@ -143,12 +143,12 @@ export function endGame() {
 
 function startGame() {
   select('.main-splash').style.display = 'none'
-  select('.main-game').style.display = 'block'
+  select('.main-game').style.display = 'contents'
 }
 
 function returnToSplash() {
   const gameOver = getDOMArray('.scored').length >= 13
-  select('.main-splash').style.display = 'block'
+  select('.main-splash').style.display = 'contents'
   select('.main-game').style.display = 'none'
 
   if (gameOver) {
@@ -165,7 +165,7 @@ function restartGame() {
   })
   select('.p-bonus-num').innerText = '0 / 63'
 
-  select('.btm-section').style.display = 'block'
+  select('.btm-section').style.display = 'contents'
   select('.end-game').style.display = 'none'
   select('.roll').classList.remove('done')
   select('.score').classList.remove('done')
