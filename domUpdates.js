@@ -6,6 +6,10 @@ const getDOMArray = (selector) => {
 };
 
 select('.btm-section').addEventListener('click', handleClick)
+select('.start-game').addEventListener('click', startGame)
+select('.return').addEventListener('click', returnToSplash)
+select('.end-return').addEventListener('click', returnToSplash)
+select('.restart').addEventListener('click', restartGame)
 
 export function addScoreBoxEventListeners() {
   getDOMArray('.player').map(box => {
@@ -36,6 +40,9 @@ function animateScoredBox(target) {
   setTimeout(() => {
     target.classList.add('bounce')
   }, 900);
+  setTimeout(() => {
+    target.classList.remove('bounce')
+  }, 900);
 }
 
 function animateDice(target) {
@@ -50,7 +57,7 @@ function animateDice(target) {
 
     let distTop = targetBox.offsetTop - vSpacer;
     let distLeft = targetBox.offsetLeft - hSpacer;
-    
+
     root.setProperty('--dest-box-top', distTop + 'px')
     root.setProperty('--dest-box-left', distLeft + 'px')
     root.setProperty('--dice-top', die.offsetTop + 'px')
@@ -131,14 +138,41 @@ export function checkForUpperBonus() {
 
 export function endGame() {
   select('.btm-section').style.display = 'none'
-  select('.restart-game').addEventListener('click', restartGame)
+  select('.end-game').classList.remove('hidden')
   select('.roll').classList.add('done')
   select('.score').classList.add('done')
   alert('GAME OVER')
 }
 
+function startGame() {
+  select('.main-splash').classList.add('hidden')
+  select('.main-game').classList.remove('hidden')
+}
+
+function returnToSplash() {
+  const gameOver = getDOMArray('.scored').length >= 13
+  select('.main-splash').classList.remove('hidden')
+  select('.main-game').classList.add('hidden')
+  
+  if (gameOver) {
+    restartGame()
+    select('.start-game').innerText = "New Game"
+  } else select('.start-game').innerText = "Resume Game"
+}
+
 function restartGame() {
-  document.location.reload();
+  index.restartGame()
+  getDOMArray('.box').map(box => {
+    box.innerText = ''
+    box.classList.remove('scored')
+  })
+  select('.p-bonus-num').innerText = '0 / 63'
+
+  select('.btm-section').style.display = 'block'
+  select('.end-game').classList.add('hidden')
+  select('.roll').classList.remove('done')
+  select('.score').classList.remove('done')
+  select('#ttlscore').innerText = 0
 }
 
 function scoreBox({ target }) {
