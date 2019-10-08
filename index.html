@@ -14,9 +14,19 @@
 </head>
 
 <body>
-  <main>
-    <div class="total-score">
-      <p>Score: <span id="ttlscore">0</span> </p>
+  <main class="main-splash">
+    <div>
+      <img src="./images/dice.jpg" alt="game icon">
+      <h1 class="title">Yahtzee</h1>
+      <span class="start-game">New Game</span>
+    </div>
+  </main>
+  <main class="main-game hidden">
+    <div class="header">
+      <span class="return">⬅︎</span>
+      <p class="total-score">
+        Score: <span id="ttlscore">0</span>
+      </p>
     </div>
     <article class="scores">
       <section class="upper-section">
@@ -181,24 +191,23 @@
         <div class="score done">PLAY</div>
       </section>
     </article>
-    <article class="end-game">
-      <section class="restart-game">
-        <div class="restart">RESET GAME</div>
-      </section>
+    <article class="end-game hidden">
+      <div class="restart">PLAY AGAIN</div>
+      <div class="return end-return">RETURN HOME</div>
     </article>
   </main>
 </body>
 <script type="module" src="index.js"></script>
 <script>
   if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("./serviceWorker.js")
-        .then(function (registration) {
-          console.log("Service Worker registered with scope:",
-            registration.scope);
-        }).catch(function (err) {
-          console.log("Service worker registration failed:", err);
-        });
-    }
+    navigator.serviceWorker.register("./serviceWorker.js")
+      .then(function (registration) {
+        console.log("Service Worker registered with scope:",
+          registration.scope);
+      }).catch(function (err) {
+        console.log("Service worker registration failed:", err);
+      });
+  }
 </script>
 
 </html>
