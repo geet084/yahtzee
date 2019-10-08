@@ -135,21 +135,21 @@ export function checkForUpperBonus() {
 
 export function endGame() {
   select('.btm-section').style.display = 'none'
-  select('.end-game').classList.remove('hidden')
+  select('.end-game').style.display = 'block'
   select('.roll').classList.add('done')
   select('.score').classList.add('done')
   alert('GAME OVER')
 }
 
 function startGame() {
-  select('.main-splash').classList.add('hidden')
-  select('.main-game').classList.remove('hidden')
+  select('.main-splash').style.display = 'none'
+  select('.main-game').style.display = 'block'
 }
 
 function returnToSplash() {
   const gameOver = getDOMArray('.scored').length >= 13
-  select('.main-splash').classList.remove('hidden')
-  select('.main-game').classList.add('hidden')
+  select('.main-splash').style.display = 'block'
+  select('.main-game').style.display = 'none'
 
   if (gameOver) {
     restartGame()
@@ -166,7 +166,7 @@ function restartGame() {
   select('.p-bonus-num').innerText = '0 / 63'
 
   select('.btm-section').style.display = 'block'
-  select('.end-game').classList.add('hidden')
+  select('.end-game').style.display = 'none'
   select('.roll').classList.remove('done')
   select('.score').classList.remove('done')
   select('#ttlscore').innerText = 0
