@@ -121,7 +121,7 @@ article {
 
 .dice-area {
   display: flex;
-  margin: 1.5vh auto;
+  margin: .5vh auto;
   flex-direction: row;
   justify-content: space-around;
 }
@@ -435,6 +435,24 @@ article {
   transform: rotate(-45deg);
 }
 
+@media screen and (max-height: 600px) {
+  .dice-area {
+    margin: 0;
+  }
+}
+
+@media screen and (min-height: 800px) {
+  .dice-area {
+    margin: 2.5vh 0;
+  }
+}
+
+@media screen and (min-height: 1000px) {
+  .dice-area {
+    margin: 1.5vh 0;
+  }
+}
+
 @media screen and (min-width: 450px) {
   .box,
   .die,
@@ -485,6 +503,8 @@ article {
     font-size: 2rem;
     border-radius: 5px;
     margin: 0 15px;
+    height: 13vw;
+    width: 13vw;
   }
 
   .rolls,
