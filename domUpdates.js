@@ -39,24 +39,21 @@ export function updateScore(score) {
 function animateScoredBox(target) {
   setTimeout(() => {
     target.classList.add('bounce')
-  }, 900);
+  }, 1000);
   setTimeout(() => {
     target.classList.remove('bounce')
-  }, 900);
+  }, 1300);
 }
 
 function animateDice(target) {
   getDOMArray('.dice').map((die, i) => {
-    let moveDie = die.cloneNode(true)
+    const moveDie = die.cloneNode(true)
 
-    let root = document.documentElement.style;
-    let targetBox = document.getElementById(target.id)
+    const root = document.documentElement.style;
+    const targetBox = document.getElementById(target.id)
 
-    let vSpacer = window.outerHeight > 900 ? 20 : 10
-    let hSpacer = window.outerWidth > 700 ? 30 : 10
-
-    let distTop = targetBox.offsetTop - vSpacer;
-    let distLeft = targetBox.offsetLeft - hSpacer;
+    const distTop = getElementOffset(targetBox).top;
+    const distLeft = getElementOffset(targetBox).left;
 
     root.setProperty('--dest-box-top', distTop + 'px')
     root.setProperty('--dest-box-left', distLeft + 'px')
@@ -153,7 +150,7 @@ function returnToSplash() {
   const gameOver = getDOMArray('.scored').length >= 13
   select('.main-splash').classList.remove('hidden')
   select('.main-game').classList.add('hidden')
-  
+
   if (gameOver) {
     restartGame()
     select('.start-game').innerText = "New Game"
@@ -215,4 +212,21 @@ function clearLastBox() {
       box.innerText = ''
     }
   })
+}
+
+function getElementOffset(el) {
+  let top = 0;
+  let left = 0;
+  let element = el;
+
+  do {
+    top += element.offsetTop || 0;
+    left += element.offsetLeft || 0;
+    element = element.offsetParent;
+  } while (element);
+
+  top -= window.outerHeight > 900 ? 20 : 10
+  left -= window.outerWidth > 700 ? 30 : 10
+
+  return { top, left };
 }
