@@ -24,11 +24,18 @@ export function updateScore(score) {
   select('#ttlscore').innerText = score
   const target = select('.hold')
   if (target) {
+    animateScoredBox(target)
     animateDice(target)
     target.classList.remove('hold')
     target.classList.add('scored')
   }
   removeScoreBoxEventListeners()
+}
+
+function animateScoredBox(target) {
+  setTimeout(() => {
+    target.classList.add('bounce')
+  }, 1000);
 }
 
 function animateDice(target) {
