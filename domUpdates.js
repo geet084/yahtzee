@@ -35,7 +35,7 @@ export function updateScore(score) {
 function animateScoredBox(target) {
   setTimeout(() => {
     target.classList.add('bounce')
-  }, 1000);
+  }, 900);
 }
 
 function animateDice(target) {
@@ -109,7 +109,7 @@ export function resetDice() {
     getDOMArray('.dbox').map(die => {
       if (die.classList.contains('moved')) die.remove()
     })
-  }, 1300);
+  }, 1200);
 
   function resetDie(die) {
     die.innerText = '';
