@@ -41,10 +41,6 @@ article {
   margin: 2vw auto 25vw;
 }
 
-.hidden {
-  display: none;
-}
-
 .end-game {
   display: flex;
   flex-direction: column;
