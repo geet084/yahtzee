@@ -1,9 +1,18 @@
 @import './animations.css';
 
+:root {
+  --primary-light: #ffffff85;
+  --primary-medium: #7395ae;
+  --primary-dark: #547a95;
+  --secondary-light: #938d94;
+  --secondary-dark: #5d5b61;
+  --tertiary-color: #b0a295;
+}
+
 body {
   margin: auto;
   height: 100%;
-  background-color: rgba(35, 215, 26, 0.468);
+  background-color: var(--primary-dark);
 }
 
 body,
@@ -25,7 +34,7 @@ article {
 }
 
 .restart {
-  background-color: #cff5cc;
+  background-color: #fff;
   font-size: 2rem;
   padding: 20px;
   border-radius: 5px;
@@ -35,7 +44,7 @@ article {
 .total-score {
   height: 7.5vh;
   font-size: 2rem;
-  background-color: rgba(35, 215, 26, 0.468);
+  background-color: var(--primary-medium);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,11 +63,12 @@ article {
   font-size: 0.8rem;
   position: relative;
   left: -5px;
-  background-color: #6be264;
+  background-color: var(--secondary-dark);
   border-radius: 3px;
 }
 
 .bonus-title {
+  color: white;
   width: 12.5vw;
   position: relative;
   margin: 0 5px;
@@ -77,7 +87,7 @@ article {
   margin: 5px;
   height: 12vw;
   width: 12vw;
-  background-color: rgb(215, 246, 210);
+  background-color: var(--secondary-light);
   display: flex;
   border-radius: 3px;
   justify-content: center;
@@ -112,7 +122,7 @@ article {
 }
 
 .held {
-  color: #005a0b;
+  color: #fff;
   box-shadow: 0px 0px 4px 2px rgb(44, 44, 44);
 }
 
@@ -145,18 +155,19 @@ article {
 }
 
 .rolls {
-  background-color: rgba(35, 215, 26, 0.468);
+  background-color: #aebfcc;
   border-radius: 3px;
   width: 3.5vw;
+  height: 3.5vw;
   margin: 7px 7px;
 }
 
 .roll-count {
-  color: black;
-  background-color: rgb(215, 246, 210);
+  color: white;
   border-radius: 3px;
   width: 4vw;
-  height: 10px;
+  height: 3.5vw;
+  width: 3.5vw;
   display: flex;
   align-items: center;
 }
@@ -175,14 +186,14 @@ article {
 
 .box,
 .dbox {
-  background-color: rgba(255, 255, 255, 0.523);
+  background-color: var(--primary-light);
   border-radius: 3px;
   margin: 5px;
   padding: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  font-size: 1.75rem;
 }
 
 .box {
@@ -205,7 +216,7 @@ article {
 }
 
 .scored {
-  box-shadow: 0px 0px 4px 2px rgb(151, 236, 148);
+  box-shadow: 0px 0px 4px 2px var(--primary-dark);
 }
 
 .done {
