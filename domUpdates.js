@@ -76,6 +76,7 @@ function animateDice(target) {
 }
 
 export function updateDiceArea(dice, count) {
+  clearLastBox()
   getDOMArray('.dice').map((die, i) => {
     if (!die.classList.contains('held')) die.classList.add('bounce')
     die.innerText = dice[i]
