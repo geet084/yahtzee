@@ -9,6 +9,20 @@
   --dice-5-left: 0px;
 }
 
+.flipBox {
+  animation: flipX 0.4s linear 0s 2 normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes flipX {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
 .bounce {
   animation: bounceIn 0.4s;
 }

@@ -45,11 +45,11 @@ export function updateScore(score) {
 
 function animateScoredBox(target) {
   setTimeout(() => {
-    target.classList.add('bounce')
-  }, 1000);
+    target.classList.add('flipBox')
+  }, 700);
   setTimeout(() => {
-    target.classList.remove('bounce')
-  }, 1300);
+    target.classList.remove('flipBox')
+  }, 1500);
 }
 
 function animateDice(target) {
