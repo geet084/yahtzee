@@ -121,7 +121,7 @@ export function resetDice() {
     getDOMArray('.dbox').map(die => {
       if (die.classList.contains('moved')) die.remove()
     })
-  }, 1200);
+  }, 1100);
 
   function resetDie(die) {
     die.innerText = '';
@@ -142,21 +142,32 @@ export function checkForUpperBonus() {
 }
 
 export function endGame() {
-  select('.btm-section').style.display = 'none'
-  select('.end-game').style.display = 'contents'
-  select('.roll').classList.add('done')
-  select('.score').classList.add('done')
-  alert('GAME OVER')
+  setTimeout(() => {
+    select('.scores').classList.add('partial-fade');
+    select('.mid-section').classList.add('partial-fade');
+    select('.btm-section').classList.add('fade-out')
+  }, 1700);
+
+  setTimeout(() => {
+    select('.btm-section').style.opacity = 0
+    select('.btm-section').style.display = 'none'
+    select('.scores').style.opacity = .3;
+    select('.mid-section').style.opacity = .3;
+    select('.end-game').style.display = ''
+  }, 2500);
+
+  select('.end-game').classList.add('slide-up')
+  select('.end-game').style.position = 'relative'
 }
 
 function startGame() {
   select('.main-splash').style.display = 'none'
-  select('.main-game').style.display = 'contents'
+  select('.main-game').style.display = ''
 }
 
 function returnToSplash() {
   const gameOver = getDOMArray('.scored').length >= 13
-  select('.main-splash').style.display = 'contents'
+  select('.main-splash').style.display = ''
   select('.main-game').style.display = 'none'
 
   if (gameOver) {
@@ -167,17 +178,40 @@ function returnToSplash() {
 
 function restartGame() {
   index.restartGame()
-  getDOMArray('.box').map(box => {
-    box.innerText = ''
-    box.classList.remove('scored')
-  })
-  select('.p-bonus-num').innerText = '0 / 63'
 
-  select('.btm-section').style.display = 'contents'
-  select('.end-game').style.display = 'none'
-  select('.roll').classList.remove('done')
-  select('.score').classList.remove('done')
-  select('#ttlscore').innerText = 0
+  setTimeout(() => {
+    select('.scores').classList.remove('partial-fade');
+    select('.mid-section').classList.remove('partial-fade');
+    select('.btm-section').classList.remove('fade-out')
+    select('.end-game').classList.remove('slide-up')
+    select('.end-game').classList.add('slide-down')
+    select('.scores').classList.add('fade-in');
+    select('.mid-section').classList.add('fade-in');
+    getDOMArray('.box').map(box => {
+      box.innerText = ''
+      box.classList.remove('scored')
+    })
+    select('.p-bonus-num').innerText = '0 / 63'
+    select('#ttlscore').innerText = 0
+  }, 300);
+
+  setTimeout(() => {
+    select('.btm-section').style.display = ''
+    select('.btm-section').classList.add('fade-in')
+  }, 500);
+
+  setTimeout(() => {
+    select('.end-game').style.position = 'absolute'
+    select('.end-game').style.bottom = '-200px'
+    select('.end-game').style.display = 'none'
+    select('.btm-section').style.opacity = 1;
+    select('.scores').style.opacity = 1;
+    select('.mid-section').style.opacity = 1;
+    select('.end-game').classList.remove('slide-down')
+    select('.scores').classList.remove('fade-in');
+    select('.mid-section').classList.remove('fade-in');
+    select('.btm-section').classList.remove('fade-in')
+  }, 1100);
 }
 
 function scoreBox({ target }) {
