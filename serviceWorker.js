@@ -1,5 +1,5 @@
 self.addEventListener("install", function (event) {
-  console.log('WORKER: install event in progress.');
+  // console.log('WORKER: install event in progress.');
   event.waitUntil(
     /* The caches built-in is a promise-based API that helps you cache responses,
        as well as finding and deleting them.
@@ -49,7 +49,7 @@ self.addEventListener('message', function (event) {
 });
 
 self.addEventListener('fetch', function (event) {
-  console.log(event.request.url);
+  // console.log(event.request.url);
 
   event.respondWith(
     caches.match(event.request).then(function (response) {

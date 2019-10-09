@@ -28,6 +28,14 @@ article {
   padding: 5px;
 }
 
+#notification {
+  display: none;
+}
+
+.show {
+  display: content;
+}
+
 .main-splash {
   text-align: center;
   height: 100vh;
