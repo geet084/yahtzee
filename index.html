@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no maximum-scale=1 minimum-scale=1">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0 user-scalable=no maximum-scale=1 minimum-scale=1">
   <meta name="Description" content="Yahtzee">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#547a95" />
@@ -199,15 +200,40 @@
 </body>
 <script type="module" src="index.js"></script>
 <script>
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("./serviceWorker.js")
+  let newWorker;
+
+  document.getElementById('reload').addEventListener('click', function () {
+    newWorker.postMessage({ action: 'skipWaiting' });
+  });
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./serviceWorker.js')
       .then(function (registration) {
-        console.log("Service Worker registered with scope:",
-          registration.scope);
+        registration.addEventListener('updatefound', () => {
+          newWorker = registration.installing;
+          newWorker.addEventListener('statechange', () => {
+            switch (newWorker.state) {
+              case 'installed':
+                if (navigator.serviceWorker.controller) {
+                  let notification = document.getElementById('notification ');
+                  notification.className = 'show';
+                }
+                break;
+            }
+          });
+        });
       }).catch(function (err) {
         console.log("Service worker registration failed:", err);
       });
+
   }
+
+  let refreshing;
+    navigator.serviceWorker.addEventListener('controllerchange', function () {
+      if (refreshing) return;
+      window.location.reload();
+      refreshing = true;
+    });
 </script>
 
 </html>
