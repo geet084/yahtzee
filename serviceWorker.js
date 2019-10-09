@@ -25,6 +25,7 @@ self.addEventListener("install", function (event) {
           './images/icon-192.png',
           './images/icon-384.png',
           './images/icon-512.png',
+          './images/logo.png',
           './animations.css',
           './domUpdates.js',
           './game.js',
