@@ -46,6 +46,8 @@ article {
 .end-game {
   display: flex;
   flex-direction: column;
+  position: absolute;
+  bottom: -200px;
 }
 
 .start-game {
@@ -73,12 +75,13 @@ article {
 .header {
   height: 7.5vh;
   font-size: 2rem;
-  background-color: var(--primary-medium);
+  background-color: var(--secondary-dark);
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 0 10px;
   box-shadow: 0px -5px 10px 5px rgba(0, 0, 0, 0.75);
+  color: #fff;
 }
 .return {
   flex: 1;
@@ -89,8 +92,8 @@ article {
 }
 
 .mid-section {
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
   width: 100%;
 }
 
@@ -106,7 +109,7 @@ article {
 }
 
 .bonus-title {
-  color: white;
+  color: #fff;
   width: 12.5vw;
   position: relative;
   margin: 0 5px;
@@ -201,7 +204,7 @@ article {
 }
 
 .roll-count {
-  color: white;
+  color: #fff;
   border-radius: 3px;
   width: 4vw;
   height: 3.5vw;
@@ -275,7 +278,7 @@ article {
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  background-color: #fff;
   border: 2px solid black;
 }
 
@@ -362,7 +365,7 @@ article {
 }
 
 .fh .door {
-  background-color: white;
+  background-color: #fff;
   width: 6px;
   height: 15px;
   position: relative;
