@@ -7,8 +7,9 @@ export function handleScore() {
   const score = game.updateScore()
   dom.checkForUpperBonus()
   dom.updateScore(score)
-  dom.nextTurn()
-  checkForGameEnd()
+  game.round > 0 ? dom.nextTurn() : endOfGame(score)
+  // dom.nextTurn()
+  // checkForGameEnd()
 }
 
 export function handleBonus(total) {
@@ -33,14 +34,19 @@ export function getRolledPoints(target) {
   return game.points
 }
 
-function checkForGameEnd() {
-  if (game.round === 0) {
-    const score = game.updateScore()
-    dom.checkForUpperBonus()
-    dom.updateScore(score)
-    dom.endGame()
-  }
+function endOfGame(score) {
+  dom.endGame()
+  dom.checkForUpperBonus()
+  dom.updateScore(score)
 }
+// function checkForGameEnd() {
+//   if (game.round === 0) {
+//     const score = game.updateScore()
+//     dom.checkForUpperBonus()
+//     dom.updateScore(score)
+//     dom.endGame()
+//   }
+// }
 
 export function restartGame() {
   game = new Game()
