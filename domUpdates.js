@@ -1,4 +1,5 @@
 import * as index from './index.js';
+screen.lockOrientation('portrait');
 
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -142,6 +143,10 @@ export function checkForUpperBonus() {
 }
 
 export function endGame() {
+  select('.btm-section').removeEventListener('click', handleClick)
+  select('.roll').classList.add('done')
+  select('.score').classList.add('done')
+
   setTimeout(() => {
     select('.scores').classList.add('partial-fade');
     select('.mid-section').classList.add('partial-fade');
@@ -178,6 +183,7 @@ function returnToSplash() {
 
 function restartGame() {
   index.restartGame()
+  select('.btm-section').addEventListener('click', handleClick)
 
   setTimeout(() => {
     select('.scores').classList.remove('partial-fade');
