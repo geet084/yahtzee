@@ -39,6 +39,8 @@ article {
 .main-splash {
   text-align: center;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-splash img {
@@ -48,8 +50,16 @@ article {
   border-radius: 5px;
 }
 
+.splash-top {
+  flex-grow: 1;
+}
+
+.splash-btm {
+  flex-grow: 2;
+}
+
 .title {
-  margin: 2vw auto 25vw;
+  margin: 2vw auto;
 }
 
 .end-game {
