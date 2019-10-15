@@ -1,7 +1,12 @@
 import Game from './game.js';
 import * as dom from './domUpdates.js'
 
-let game = new Game();
+let game;
+dom.highScores()
+
+export function newGame() {
+  game = new Game();
+}
 
 export function handleScore() {
   const score = game.updateScore()
@@ -40,8 +45,4 @@ function checkForGameEnd() {
     dom.updateScore(score)
     dom.endGame()
   }
-}
-
-export function restartGame() {
-  game = new Game()
 }
