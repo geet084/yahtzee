@@ -167,6 +167,7 @@ export function endGame() {
 function startGame() {
   select('.main-splash').style.display = 'none'
   select('.main-game').style.display = ''
+  index.newGame()
 }
 
 function returnToSplash() {
@@ -181,7 +182,8 @@ function returnToSplash() {
 }
 
 function restartGame() {
-  index.restartGame()
+  highScores(select('#ttlscore').innerText)
+  index.newGame()
   select('.btm-section').addEventListener('click', handleClick)
 
   setTimeout(() => {
@@ -276,4 +278,31 @@ function getElementOffset(el) {
   left -= window.outerWidth > 700 ? 30 : 10
 
   return { top, left };
+}
+
+export function highScores(score) {
+  const stored = JSON.parse(localStorage.getItem('yScores'))
+  const highScores = stored ? stored : new Array(3).fill({ score: 0, date: '1/1/2000' })
+  const newScore = { score: parseInt(score), date: getFormattedDate(new Date()) }
+
+  highScores.push(newScore)
+  highScores.sort((a, b) => b.score - a.score)
+  highScores.pop()
+
+  getDOMArray('.high-scores').map((highScore, i) => {
+    if (highScores[i].score >= 1) {
+      const score = highScores[i].score.toString().padStart(3)
+      highScore.innerText = `${score} - ${highScores[i].date}`
+    }
+  })
+
+  localStorage.setItem('yScores', JSON.stringify(highScores))
+}
+
+function getFormattedDate(date) {
+  let year = parseInt(date.getFullYear().toString().slice(2, 4))
+  let month = (1 + date.getMonth()).toString().padStart(2, '0');
+  let day = date.getDate().toString().padStart(2, '0');
+  
+  return month + '/' + day + '/' + year;
 }
