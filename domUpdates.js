@@ -31,8 +31,8 @@ export function removeScoreBoxEventListeners() {
   })
 }
 
-export function updateScore(score) {
-  select('#ttlscore').innerText = score
+export function updateScore(score, player = 'p') {
+  select(`#${player}-ttlscore`).innerText = score
   const target = select('.hold')
   if (target) {
     animateScoredBox(target)
@@ -41,6 +41,7 @@ export function updateScore(score) {
     target.classList.add('scored')
   }
   removeScoreBoxEventListeners()
+  if(player === 'p') index.playComp()
 }
 
 function animateScoredBox(target) {
@@ -219,6 +220,11 @@ function restartGame() {
     select('.mid-section').classList.remove('fade-in');
     select('.btm-section').classList.remove('fade-in')
   }, 1100);
+}
+
+export function compScore(target, score) {
+  select(`#${target}`).innerText = score;
+  select(`#${target}`).classList.add('scored');
 }
 
 function scoreBox({ target }) {
