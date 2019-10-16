@@ -139,7 +139,7 @@ export function checkForUpperPlayerBonus() {
     if (value >= 0 && isUpper) upperTotal += value
   })
   select('.p-bonus-num').innerText = `${upperTotal} / 63`
-  index.handlePlayerBonus(upperTotal)
+  index.handleBonus(upperTotal, 'p1')
 }
 
 export function checkForUpperCompBonus() {
@@ -151,7 +151,7 @@ export function checkForUpperCompBonus() {
     if (value >= 0 && isUpper) upperTotal += value
   })
   select('.c-bonus-num').innerText = `${upperTotal} / 63`
-  index.handleCompBonus(upperTotal)
+  index.handleBonus(upperTotal, 'p2')
 }
 
 export function endGame() {

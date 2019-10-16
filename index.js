@@ -28,12 +28,8 @@ export function playComp() {
   }
 }
 
-export function handlePlayerBonus(total) {
-  if (total >= 63) game.addPlayerBonus()
-}
-
-export function handleCompBonus(total) {
-  if (total >= 63) game.addCompBonus()
+export function handleBonus(total, player) {
+  if (total >= 63) game.addBonus(player)
 }
 
 export function handleRoll() {
