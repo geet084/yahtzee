@@ -9,7 +9,8 @@ export default class Game {
     this.rollCount = 0
     this.heldDice = [false, false, false, false, false]
     this.dice = [0, 0, 0, 0, 0]
-    this.bonus = 35
+    this.p1Bonus = 35
+    this.p2Bonus = 35
     this.points = 0
     this.numYahtzee = 0
     this.compTarget = 'cx5'
@@ -54,9 +55,14 @@ export default class Game {
     if (this.points >= 50) this.numYahtzee += 1
   }
 
-  addBonus() {
-    this.players[this.currentPlayer].score += this.bonus
-    this.bonus = 0
+  addPlayerBonus() {
+    this.players.p1.score += this.bonus
+    this.p1Bonus = 0
+  }
+
+  addCompBonus() {
+    this.players.p2.score += this.bonus
+    this.p2Bonus = 0
   }
 }
 
