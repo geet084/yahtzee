@@ -107,7 +107,7 @@ article {
 }
 
 .total-score {
-  flex: 2;
+  /* flex: 2; */
 }
 
 .mid-section {
@@ -259,6 +259,10 @@ article {
   font-size: 1.75rem;
 }
 
+.comp {
+  background-color: #547a95;
+}
+
 .box {
   height: 12vw;
   width: 12vw;
@@ -269,13 +273,8 @@ article {
   width: 15vw;
 }
 
-.player,
-.comp {
+.player {
   box-shadow: 2px 2px 5px -1px rgb(0, 0, 0);
-}
-
-.comp {
-  visibility: hidden;
 }
 
 .scored {
