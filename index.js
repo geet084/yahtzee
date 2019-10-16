@@ -24,7 +24,7 @@ export function playComp() {
     dom.updateScore(score, 'c')
     dom.checkForUpperCompBonus()
     game.nextPlayer()
-    checkForGameEnd() 
+    checkForGameEnd()
   }
 }
 
@@ -38,15 +38,13 @@ export function handleCompBonus(total) {
 
 export function handleRoll() {
   dom.addScoreBoxEventListeners()
+  const { canRoll, dice, rollCount } = game.rollDice()
 
-  if (game.rollCount < 3) {
-    let dice = game.rollDice()
-    dom.updateDiceArea(dice, game.rollCount)
-  }
+  if (canRoll) dom.updateDiceArea(dice, rollCount)
 }
 
 export function toggleHeldDice(index) {
-  game.heldDice[index] = !game.heldDice[index]
+  game.toggleHeldDice(index)
 }
 
 export function getRolledPoints(target) {
