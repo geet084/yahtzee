@@ -130,7 +130,7 @@ export function resetDice() {
   }
 }
 
-export function checkForUpperBonus() {
+export function checkForUpperPlayerBonus() {
   let upperTotal = 0
 
   getDOMArray('.player').map(box => {
@@ -139,7 +139,19 @@ export function checkForUpperBonus() {
     if (value >= 0 && isUpper) upperTotal += value
   })
   select('.p-bonus-num').innerText = `${upperTotal} / 63`
-  index.handleBonus(upperTotal)
+  index.handlePlayerBonus(upperTotal)
+}
+
+export function checkForUpperCompBonus() {
+  let upperTotal = 0
+
+  getDOMArray('.comp').map(box => {
+    const value = parseInt(box.innerText)
+    const isUpper = box.id.includes('u')
+    if (value >= 0 && isUpper) upperTotal += value
+  })
+  select('.c-bonus-num').innerText = `${upperTotal} / 63`
+  index.handleCompBonus(upperTotal)
 }
 
 export function endGame() {
@@ -183,7 +195,8 @@ function returnToSplash() {
 }
 
 function restartGame() {
-  highScores(select('#ttlscore').innerText)
+  highScores(select('#p-ttlscore').innerText)
+  highScores(select('#c-ttlscore').innerText)
   index.newGame()
   select('.btm-section').addEventListener('click', handleClick)
 
@@ -200,7 +213,9 @@ function restartGame() {
       box.classList.remove('scored')
     })
     select('.p-bonus-num').innerText = '0 / 63'
-    select('#ttlscore').innerText = 0
+    select('.c-bonus-num').innerText = '0 / 63'
+    select('#p-ttlscore').innerText = 0
+    select('#c-ttlscore').innerText = 0
   }, 300);
 
   setTimeout(() => {
