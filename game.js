@@ -1,14 +1,13 @@
 import Player from './player.js';
 import Points from './points.js';
+import Dice from './dice.js';
 
 export default class Game {
   constructor() {
     this.round = 13
     this.currentPlayer = 'p1';
     this.players = { p1: new Player('human'), p2: new Player('comp') }
-    this.rollCount = 0
-    this.heldDice = [false, false, false, false, false]
-    this.dice = [0, 0, 0, 0, 0]
+    this.dice = new Dice()
     this.p1Bonus = 35
     this.p2Bonus = 35
     this.points = 0
@@ -19,8 +18,7 @@ export default class Game {
   updateScore() {
     this.players[this.currentPlayer].score += this.points
     this.points = 0
-    this.heldDice = [false, false, false, false, false]
-    this.rollCount = 0
+    this.dice.reset()
     if (this.currentPlayer === 'p1') {
       this.round--
       return { player: this.currentPlayer, score: this.players[this.currentPlayer].score }
@@ -40,16 +38,21 @@ export default class Game {
   }
 
   rollDice() {
-    this.rollCount++
-    newDiceRoll().map((die, i) => {
-      const notHeld = this.heldDice[i] === false
-      if (notHeld) this.dice[i] = die
-    })
-    return this.dice
+    this.dice.newRoll()
+
+    return {
+      dice: this.dice.roll,
+      rollCount: this.dice.rollCount,
+      canRoll: this.dice.canRoll
+    }
+  }
+
+  toggleHeldDice(index) {
+    this.dice.toggleHold(index)
   }
 
   getPoints(target) {
-    let points = new Points(this.dice, this.numYahtzee)
+    let points = new Points(this.dice.roll, this.numYahtzee)
     this.points = points.calculate(target)
 
     if (this.points >= 50) this.numYahtzee += 1
@@ -64,12 +67,4 @@ export default class Game {
     this.players.p2.score += this.bonus
     this.p2Bonus = 0
   }
-}
-
-function newDiceRoll() {
-  let dice = []
-  for (let i = 0; i < 5; i++) {
-    dice.push(Math.floor(Math.random() * 6) + 1)
-  }
-  return dice
 }
