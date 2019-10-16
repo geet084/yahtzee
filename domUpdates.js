@@ -31,7 +31,7 @@ export function removeScoreBoxEventListeners() {
   })
 }
 
-export function updateScore(score, player = 'p') {
+export function updateScore(score, player) {
   select(`#${player}-ttlscore`).innerText = score
   const target = select('.hold')
   if (target) {

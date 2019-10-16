@@ -28,8 +28,7 @@ export default class Game {
 
   compTurn() {
     let opt = ['cu1', 'cu2', 'cu3', 'cu4', 'cu5', 'cu6', 'cx3', 'cx4', 'cfh', 'css', 'cls', 'cx5', 'cch']
-    let thing = Math.floor(Math.random() * 13) + 1
-    this.compTarget = opt[thing]
+    this.compTarget = opt[this.round]
     let num = Math.floor(Math.random() * 5) + 1
     this.players[this.currentPlayer].score += num
     return { points: num, score: this.players[this.currentPlayer].score }

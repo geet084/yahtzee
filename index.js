@@ -12,16 +12,19 @@ export function handleScore() {
   const { player, score } = game.updateScore()
   game.nextPlayer()
   dom.checkForUpperBonus()
-  if (player === 'p1') dom.updateScore(score)
+  if (player === 'p1') dom.updateScore(score, 'p')
   dom.nextTurn()
   checkForGameEnd()
 }
 
 export function playComp() {
-  const { points, score } = game.compTurn()
-  dom.compScore(game.compTarget, points)
-  dom.updateScore(score, 'c')
-  game.nextPlayer()
+  if (game.round !== 0) {
+    const { points, score } = game.compTurn()
+    dom.compScore(game.compTarget, points)
+    dom.updateScore(score, 'c')
+    game.nextPlayer()
+    checkForGameEnd() 
+  }
 }
 
 export function handleBonus(total) {
@@ -48,9 +51,11 @@ export function getRolledPoints(target) {
 
 function checkForGameEnd() {
   if (game.round === 0) {
-    const {player, score} = game.updateScore()
+    const p1Score = game.players.p1.score
+    const p2Score = game.players.p2.score
     dom.checkForUpperBonus()
-    dom.updateScore(player, score)
+    dom.updateScore(p1Score, 'p')
+    dom.updateScore(p2Score, 'c')
     dom.endGame()
   }
 }
