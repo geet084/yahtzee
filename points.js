@@ -14,18 +14,18 @@ export default class Points {
       5: 0,
       6: 0
     }
-
+    
     this.dice.map(die => scoreMap[die]++);
     const yahtzee = checkForYahtzee(scoreMap)
     
-    if (target === 'px5' && yahtzee) score = 50
-    if (target.includes('pu')) score = scoreUpperBox(target, this.dice);
-    if (target === 'px3') score = scoreNumOfKind(3, scoreMap, this.dice);
-    if (target === 'px4') score = scoreNumOfKind(4, scoreMap, this.dice);
-    if (target === 'pfh') score = scoreFullHouse(scoreMap);
-    if (target === 'pss') score = scoreSmallStraight(scoreMap);
-    if (target === 'pls') score = scoreLargeStraight(scoreMap);
-    if (target === 'pch') score = scoreChance(this.dice);
+    if (target.includes('x5') && yahtzee) score = 50
+    if (target.includes('u')) score = scoreUpperBox(target, this.dice);
+    if (target.includes('x3')) score = scoreNumOfKind(3, scoreMap, this.dice);
+    if (target.includes('x4')) score = scoreNumOfKind(4, scoreMap, this.dice);
+    if (target.includes('fh')) score = scoreFullHouse(scoreMap);
+    if (target.includes('ss')) score = scoreSmallStraight(scoreMap);
+    if (target.includes('ls')) score = scoreLargeStraight(scoreMap);
+    if (target.includes('ch')) score = scoreChance(this.dice);
     
     if (yahtzee && this.numYahtzee > 0) score += 50
     
