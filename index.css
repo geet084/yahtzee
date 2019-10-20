@@ -10,6 +10,74 @@
   --tertiary-color: #b0a295;
 }
 
+.onoffswitch {
+  position: relative;
+  width: 140px;
+  margin: 3vh auto;
+}
+.onoffswitch-checkbox {
+  display: none;
+}
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #999999;
+  border-radius: 20px;
+}
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+  content: 'Single Player';
+  padding-right: 15px;
+  background-color: #aebfcc;
+  color: #ffffff;
+}
+.onoffswitch-inner:after {
+  content: 'Against PC';
+  padding-right: 20px;
+  background-color: #eeeeee;
+  color: #999999;
+  text-align: right;
+}
+.onoffswitch-switch {
+  display: block;
+  width: 18px;
+  margin: 6px;
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 105px;
+  border: 2px solid #999999;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}
+
 body {
   margin: auto;
   height: 100vh;
@@ -46,7 +114,7 @@ article {
 .main-splash img {
   max-width: 300px;
   width: 80%;
-  margin-top: 15vw;
+  margin-top: 5vw;
   border-radius: 5px;
 }
 
@@ -59,7 +127,11 @@ article {
 }
 
 .title {
-  margin: 2vw auto;
+  margin: 0 auto 2vw;
+}
+
+.high-scores {
+  margin: 3vh auto;
 }
 
 .end-game {
