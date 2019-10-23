@@ -9,21 +9,22 @@ export function newGame() {
 }
 
 export function handleScore() {
-  const { player, score } = game.updateScore()
-  game.nextPlayer()
+  game.updateScore()
   dom.checkForUpperPlayerBonus()
+  const { player, score } = game.getScore()
   if (player === 'p1') dom.updateScore(score, 'p')
+  game.nextPlayer()
   dom.nextTurn()
   checkForGameEnd()
 }
 
 export function playComp() {
+  game.nextPlayer()
   if (game.round !== 0 || (game.round === 0 && game.currentPlayer === 'p2')) {
-    const { points, score } = game.compTurn()
-    dom.compScore(game.compTarget, points)
+    const { target, points, score } = game.compTurn()
+    dom.compScore(target, points)
     dom.updateScore(score, 'c')
     dom.checkForUpperCompBonus()
-    game.nextPlayer()
     checkForGameEnd()
   }
 }
