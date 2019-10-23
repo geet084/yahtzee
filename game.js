@@ -9,25 +9,49 @@ export default class Game {
     this.players = { p1: new Player('human'), p2: new Player('comp') }
     this.dice = new Dice()
     this.points = 0
-    this.compTarget = 'cx5'
+    this.opt = ['cu1', 'cu2', 'cu3', 'cu4', 'cu5', 'cu6', 'cx3', 'cx4', 'cfh', 'css', 'cls', 'cx5', 'cch']
+    this.arr = { points: 0, box: '' }
   }
 
   updateScore() {
     this.players[this.currentPlayer].updateScore(this.points)
     this.points = 0
     this.dice.reset()
-    if (this.currentPlayer === 'p1') {
-      this.round--
-      return { player: this.currentPlayer, score: this.players[this.currentPlayer].score }
-    }
+    if (this.currentPlayer === 'p1') this.round--
+  }
+
+  getScore() {
+    return { player: this.currentPlayer, score: this.players[this.currentPlayer].score }
   }
 
   compTurn() {
-    let opt = ['cu1', 'cu2', 'cu3', 'cu4', 'cu5', 'cu6', 'cx3', 'cx4', 'cfh', 'css', 'cls', 'cx5', 'cch']
-    this.compTarget = opt[this.round]
-    let num = Math.floor(Math.random() * 5) + 1
-    this.players[this.currentPlayer].updateScore(num)
-    return { points: num, score: this.players[this.currentPlayer].score }
+    this.arr = { points: 0, box: '' }
+    this.dice.newRoll()
+    
+    for (let i = 0; i < 3; i++) {
+      if (this.points < 1) this.rollComp()
+    }
+    
+    if (this.arr.points === 0) {
+      this.arr.points = 0
+      this.arr.box = this.opt[0]
+    }
+    this.opt.splice(this.opt.indexOf(this.arr.box), 1)
+    this.players[this.currentPlayer].updateScore(this.arr.points)
+    this.points = 0
+    this.dice.reset()
+    return {
+      target: this.arr.box,
+      points: this.arr.points,
+      score: this.players[this.currentPlayer].score
+    }
+  }
+
+  rollComp() {
+    this.opt.forEach(op => {
+      this.getPoints(op)
+      if (this.points > this.arr.points) this.arr = { points: this.points, box: op }
+    })
   }
 
   nextPlayer() {
