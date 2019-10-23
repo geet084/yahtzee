@@ -12,11 +12,28 @@ const getDOMArray = (selector) => {
   return Array.from(document.querySelectorAll(selector));
 };
 
+window.onload = function () {
+  getDOMArray('.comp').forEach(box => box.style.visibility = 'hidden')
+  select('.comp-score').style.display = 'none'
+}
+
 select('.btm-section').addEventListener('click', handleClick)
 select('.start-game').addEventListener('click', startGame)
 select('.return').addEventListener('click', returnToSplash)
 select('.end-return').addEventListener('click', returnToSplash)
 select('.restart').addEventListener('click', restartGame)
+select('.single').addEventListener('click', togglePlayers)
+select('.computer').addEventListener('click', togglePlayers)
+
+function togglePlayers() {
+  getDOMArray('.comp').forEach(box => {
+    const visible = box.style.visibility === 'hidden'
+    box.style.visibility = visible ? 'inherit' : 'hidden'
+    select('.comp-score').style.display = visible ? '' : 'none'
+    if (box.classList.contains('c-bonus-num')) box.style.backgroundColor = '#938d94'
+    if (box.classList.contains('ttl-comp-score')) box.style.backgroundColor = '#5d5b61'
+  })
+}
 
 export function addScoreBoxEventListeners() {
   getDOMArray('.player').map(box => {
@@ -181,6 +198,11 @@ function startGame() {
   select('.main-splash').style.display = 'none'
   select('.main-game').style.display = ''
   index.newGame()
+  // for (let i = 1; i < 14; i++) {
+  //   setTimeout(() => {
+  //     index.playComp();
+  //   }, i * 1000);
+  // }
 }
 
 function returnToSplash() {
@@ -324,6 +346,6 @@ function getFormattedDate(date) {
   let year = parseInt(date.getFullYear().toString().slice(2, 4))
   let month = (1 + date.getMonth()).toString().padStart(2, '0');
   let day = date.getDate().toString().padStart(2, '0');
-  
+
   return month + '/' + day + '/' + year;
 }

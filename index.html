@@ -26,34 +26,33 @@
       </div>
     </div>
     <div class="splash-btm">
-    <div class="onoffswitch">
-      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-      <label class="onoffswitch-label" for="myonoffswitch">
-        <span class="onoffswitch-inner single"></span>
-        <span class="onoffswitch-switch computer"></span>
-      </label>
-    </div>
-    <!-- <div class="splash-btm"> -->
+      <div class="onoffswitch">
+        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+        <label class="onoffswitch-label" for="myonoffswitch">
+          <span class="onoffswitch-inner single"></span>
+          <span class="onoffswitch-switch computer"></span>
+        </label>
+      </div>
       <span class="start-game">New Game</span>
     </div>
   </main>
   <main class="main-game" style="display: none">
-    <div class="header">
+    <article class="header">
       <span class="return">⬅︎</span>
-      <p class="total-score">
+      <div class="total-score">
         <p>
           [ P1
           <span id="p-ttlscore">0</span>
-           ]
+          ]
         </p>
-        <p class="comp ttl-comp-score">
+        <p class="comp-score ttl-comp-score">
           <span>&nbsp;|</span>
           [
           <span id="c-ttlscore">0</span>
           PC ]
         </p>
-      </p>
-    </div>
+      </div>
+    </article>
     <article class="scores">
       <section class="upper-section">
         <div class="dice-row">
@@ -255,11 +254,11 @@
   }
 
   let refreshing;
-    navigator.serviceWorker.addEventListener('controllerchange', function () {
-      if (refreshing) return;
-      window.location.reload();
-      refreshing = true;
-    });
+  navigator.serviceWorker.addEventListener('controllerchange', function () {
+    if (refreshing) return;
+    window.location.reload();
+    refreshing = true;
+  });
 </script>
 
 </html>

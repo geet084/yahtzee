@@ -173,12 +173,15 @@ article {
   box-shadow: 0px -5px 10px 5px rgba(0, 0, 0, 0.75);
   color: #fff;
 }
+
 .return {
-  flex: 1;
+  position: absolute;
+  left: 2vw;
 }
 
 .total-score {
-  /* flex: 2; */
+  display: flex;
+  justify-content: center;
 }
 
 .mid-section {
