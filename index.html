@@ -38,20 +38,23 @@
   </main>
   <main class="main-game" style="display: none">
     <article class="header">
-      <span class="return">⬅︎</span>
-      <div class="total-score">
-        <p>
-          [ P1
-          <span id="p-ttlscore">0</span>
-          ]
-        </p>
-        <p class="comp-score ttl-comp-score">
-          <span>&nbsp;|</span>
-          [
-          <span id="c-ttlscore">0</span>
-          PC ]
-        </p>
-      </div>
+      <span class="return top-return">⬅︎</span>
+      <section class="total-score">
+        <div>
+          <p class="scoring">
+            <i class="fas fa-user-circle"></i>
+            <span id="p-ttlscore">0</span>
+            <span class="spacer"></span>
+          </p>
+        </div>
+        <div class="ttl-comp-score">
+          <p class="scoring comp-score">
+            <span class="divider">|</span>
+            <span id="c-ttlscore">0</span>
+            <i class="fas fa-robot"></i>
+          </p>
+        </div>
+      </section>
     </article>
     <article class="scores">
       <section class="upper-section">
@@ -224,6 +227,7 @@
   <div id="notification">A new version of this app is available. Click <a id="reload">here</a> to update.</div>
 </body>
 <script type="module" src="index.js"></script>
+<script src="https://kit.fontawesome.com/307c1acb36.js" crossorigin="anonymous"></script>
 <script>
   let newWorker;
 

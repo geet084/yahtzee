@@ -174,7 +174,7 @@ article {
   color: #fff;
 }
 
-.return {
+.top-return {
   position: absolute;
   left: 2vw;
 }
@@ -182,6 +182,26 @@ article {
 .total-score {
   display: flex;
   justify-content: center;
+}
+
+.scoring {
+  display:flex;
+  justify-content: space-between;
+  width: 105px;
+}
+
+.fa-robot {
+  color: #7395ae;
+  font-size: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fa-user-circle {
+  color: #7395ae;
+  font-size: 2rem;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .mid-section {
