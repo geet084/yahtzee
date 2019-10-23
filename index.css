@@ -13,7 +13,7 @@
 .onoffswitch {
   position: relative;
   width: 140px;
-  margin: 3vh auto;
+  margin: 0vh auto 4vh;
 }
 .onoffswitch-checkbox {
   display: none;
@@ -118,12 +118,11 @@ article {
   border-radius: 5px;
 }
 
-.splash-top {
-  flex-grow: 1;
-}
-
 .splash-btm {
-  flex-grow: 2;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .title {
