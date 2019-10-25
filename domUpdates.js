@@ -198,11 +198,6 @@ function startGame() {
   select('.main-splash').style.display = 'none'
   select('.main-game').style.display = ''
   index.newGame()
-  // for (let i = 1; i < 14; i++) {
-  //   setTimeout(() => {
-  //     index.playComp();
-  //   }, i * 1000);
-  // }
 }
 
 function returnToSplash() {
@@ -281,7 +276,7 @@ function handleClick({ target }) {
     getDOMArray('.dbox').map(die => {
       die.classList.add('rolled')
     })
-    index.handleRoll();
+    if (select('.avail-btn')) index.handleRoll();
   }
 }
 
