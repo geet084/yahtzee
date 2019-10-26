@@ -26,16 +26,10 @@ export default class Game {
 
   compTurn() {
     this.arr = { points: 0, box: '' }
-    this.dice.newRoll()
-    
-    for (let i = 0; i < 3; i++) {
-      if (this.points < 1) this.rollComp()
-    }
-    
-    if (this.arr.points === 0) {
-      this.arr.points = 0
-      this.arr.box = this.opt[0]
-    }
+
+    this.rollComp()
+    if (this.arr.points === 0) this.arr = { points: 0, box: this.opt[0] }
+
     this.opt.splice(this.opt.indexOf(this.arr.box), 1)
     this.players[this.currentPlayer].updateScore(this.arr.points)
     this.points = 0
@@ -48,10 +42,13 @@ export default class Game {
   }
 
   rollComp() {
-    this.opt.forEach(op => {
-      this.getPoints(op)
-      if (this.points > this.arr.points) this.arr = { points: this.points, box: op }
-    })
+    for (let i = 0; i < 3; i++) {
+      this.dice.newRoll()
+      this.opt.forEach(op => {
+        this.getPoints(op)
+        if (this.points > this.arr.points) this.arr = { points: this.points, box: op }
+      })
+    }
   }
 
   nextPlayer() {
