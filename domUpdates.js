@@ -273,6 +273,8 @@ function scoreBox({ target }) {
 function handleClick({ target }) {
   if (target.id.includes('rd')) handleDice(target);
   if (target.classList.contains('roll')) {
+    select('.score').classList.remove('avail-btn')
+    select('.score').classList.add('done')
     getDOMArray('.dbox').map(die => {
       die.classList.add('rolled')
     })
