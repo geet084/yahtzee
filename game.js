@@ -1,6 +1,7 @@
 import Player from './player.js';
 import Points from './points.js';
 import Dice from './dice.js';
+import Comp from './comp.js';
 
 export default class Game {
   constructor() {
@@ -9,8 +10,7 @@ export default class Game {
     this.players = { p1: new Player('human'), p2: new Player('comp') }
     this.dice = new Dice()
     this.points = 0
-    this.opt = ['cu1', 'cu2', 'cu3', 'cu4', 'cu5', 'cu6', 'cx3', 'cx4', 'cfh', 'css', 'cls', 'cx5', 'cch']
-    this.arr = { points: 0, box: '' }
+    this.comp = new Comp(this.players.p2)
   }
 
   updateScore() {
@@ -25,29 +25,13 @@ export default class Game {
   }
 
   compTurn() {
-    this.arr = { points: 0, box: '' }
+    const { target, points } = this.comp.compTurn()
+    this.players.p2.updateScore(points)
 
-    this.rollComp()
-    if (this.arr.points === 0) this.arr = { points: 0, box: this.opt[0] }
-
-    this.opt.splice(this.opt.indexOf(this.arr.box), 1)
-    this.players[this.currentPlayer].updateScore(this.arr.points)
-    this.points = 0
-    this.dice.reset()
     return {
-      target: this.arr.box,
-      points: this.arr.points,
+      target,
+      points,
       score: this.players[this.currentPlayer].score
-    }
-  }
-
-  rollComp() {
-    for (let i = 0; i < 3; i++) {
-      this.dice.newRoll()
-      this.opt.forEach(op => {
-        this.getPoints(op)
-        if (this.points > this.arr.points) this.arr = { points: this.points, box: op }
-      })
     }
   }
 
