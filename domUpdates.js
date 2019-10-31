@@ -197,6 +197,7 @@ export function endGame() {
 function startGame() {
   select('.main-splash').style.display = 'none'
   select('.main-game').style.display = ''
+  select('#notification').style.display = 'none'
   index.newGame()
 }
 
@@ -204,6 +205,7 @@ function returnToSplash() {
   const gameOver = getDOMArray('.scored').length >= 13
   select('.main-splash').style.display = ''
   select('.main-game').style.display = 'none'
+  select('#notification').style.display = ''
 
   if (gameOver) {
     restartGame()
