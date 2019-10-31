@@ -1,7 +1,6 @@
 import Player from './player.js';
 import Points from './points.js';
 import Dice from './dice.js';
-import Comp from './comp.js';
 
 export default class Game {
   constructor() {
@@ -10,7 +9,6 @@ export default class Game {
     this.players = { p1: new Player('human'), p2: new Player('comp') }
     this.dice = new Dice()
     this.points = 0
-    this.comp = new Comp(this.players.p2)
   }
 
   updateScore() {
@@ -25,7 +23,7 @@ export default class Game {
   }
 
   compTurn() {
-    const { target, points } = this.comp.compTurn()
+    const { target, points } = this.players.p2.compTurn()
     this.players.p2.updateScore(points)
 
     return {
