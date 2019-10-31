@@ -96,12 +96,29 @@ article {
   padding: 5px;
 }
 
-#notification {
-  display: none;
+.notification {
+  position: relative;
+  bottom: -50px;
 }
 
 .show {
-  display: content;
+  position: relative;
+  bottom: 97vh;
+  border-radius: 3px;
+  box-shadow: 5px 5px 10px -1px rgb(0, 0, 0);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 80%;
+  max-width: 300px;
+  text-align: center;
+  font-size: 1.15rem;
+}
+
+#reload {
+  margin: 10px 0;
 }
 
 .main-splash {

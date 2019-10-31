@@ -224,7 +224,11 @@
       <div class="return end-return">RETURN HOME</div>
     </article>
   </main>
-  <div id="notification">A new version of this app is available. Click <a id="reload">here</a> to update.</div>
+  <div id="notification" class="notification">
+    <p id='reload'>
+      A new version of this app is available. Tap here to update.
+    </p>
+  </div>
 </body>
 <script type="module" src="index.js"></script>
 <script src="https://kit.fontawesome.com/307c1acb36.js" crossorigin="anonymous"></script>
@@ -244,7 +248,7 @@
             switch (newWorker.state) {
               case 'installed':
                 if (navigator.serviceWorker.controller) {
-                  let notification = document.getElementById('notification ');
+                  let notification = document.getElementById('notification');
                   notification.className = 'show';
                 }
                 break;
@@ -254,7 +258,6 @@
       }).catch(function (err) {
         console.log("Service worker registration failed:", err);
       });
-
   }
 
   let refreshing;
