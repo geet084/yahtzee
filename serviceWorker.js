@@ -1,3 +1,4 @@
+const cacheName = 'version 1.1'
 self.addEventListener("install", function (event) {
   // console.log('WORKER: install event in progress.');
   event.waitUntil(
@@ -9,7 +10,7 @@ self.addEventListener("install", function (event) {
          a versioned cache name here so that we can remove old cache entries in
          one fell swoop later, when phasing out an older service worker.
       */
-      .open(version + 'fundamentals')
+      .open(cacheName)
       .then(function (cache) {
         /* After the cache is opened, we can fill it with the offline fundamentals.
            The method below will add all resources we've indicated to the cache,
@@ -46,11 +47,13 @@ self.addEventListener('message', function (event) {
   if (event.data.action === 'skipWaiting') {
     self.skipWaiting();
   }
+  caches.keys().then(function (names) {
+    for (let name of names)
+      if(name !== cacheName) caches.delete(name);
+  });
 });
 
 self.addEventListener('fetch', function (event) {
-  // console.log(event.request.url);
-
   event.respondWith(
     caches.match(event.request).then(function (response) {
       return response || fetch(event.request);
