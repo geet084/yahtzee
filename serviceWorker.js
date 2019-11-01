@@ -27,14 +27,15 @@ self.addEventListener("install", function (event) {
           './images/icon-384.png',
           './images/icon-512.png',
           './images/logo.png',
-          './animations.css',
-          './domUpdates.js',
-          './game.js',
-          './index.css',
+          './src/css/animations.css',
+          './src/css/index.css',
+          './src/js/dice.js',
+          './src/js/domUpdates.js',
+          './src/js/game.js',
+          './src/js/index.js',
+          './src/js/player.js',
+          './src/js/points.js',
           './index.html',
-          './index.js',
-          './player.js',
-          './points.js',
         ]);
       })
       .then(function () {
