@@ -42,8 +42,7 @@ export default class Game {
 
     return {
       dice: this.dice.roll,
-      rollCount: this.dice.rollCount,
-      canRoll: this.dice.canRoll
+      rollCount: this.dice.rollCount
     }
   }
 
