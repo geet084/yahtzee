@@ -1,0 +1,27 @@
+{
+  "name": "yahtzee",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "jest --watch --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geet084/yahtzee.git"
+  },
+  "author": "Travis Gee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geet084/yahtzee/issues"
+  },
+  "homepage": "https://github.com/geet084/yahtzee#readme",
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "@babel/preset-env": "^7.6.3"
+  },
+  "babel": {
+    "plugins": [
+      "@babel/plugin-transform-modules-commonjs"
+    ]
+  }
+}
