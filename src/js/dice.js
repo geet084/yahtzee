@@ -3,10 +3,10 @@ export default class Dice {
     this.roll = [0, 0, 0, 0, 0]
     this.heldDice = [false, false, false, false, false]
     this.rollCount = 0
-    this.canRoll = true
   }
 
   reset() {
+    this.roll = [0, 0, 0, 0, 0]
     this.heldDice = [false, false, false, false, false]
     this.rollCount = 0
   }
@@ -16,7 +16,6 @@ export default class Dice {
   }
 
   newRoll() {
-    if (this.rollCount === 3) this.canRoll = false
     this.rollCount++
 
     newDiceRoll().map((die, i) => {
