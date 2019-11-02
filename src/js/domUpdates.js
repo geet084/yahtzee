@@ -103,7 +103,7 @@ export function updateDiceArea(dice, count) {
   rollCount.classList.add('roll-count')
   rollCount.innerText = count
   if (count === 3) {
-    select('.roll').classList.add('done')
+    getDOMArray('.roll').map(roll => roll.classList.add('done'))
     select('.roll').classList.remove('avail-btn')
   }
 
@@ -116,7 +116,7 @@ export function updateDiceArea(dice, count) {
 
 export function nextTurn() {
   resetDice()
-  select('.roll').classList.remove('done')
+  getDOMArray('.roll').map(roll => roll.classList.remove('done'))
   select('.roll').classList.add('avail-btn')
   select('.score').classList.add('done')
   select('.score').classList.remove('avail-btn')
@@ -274,7 +274,7 @@ function scoreBox({ target }) {
 
 function handleClick({ target }) {
   if (target.id.includes('rd')) handleDice(target);
-  if (target.classList.contains('roll')) {
+  if (target.classList.contains('roll') && !target.classList.contains('done')) {
     select('.score').classList.remove('avail-btn')
     select('.score').classList.add('done')
     getDOMArray('.dbox').map(die => {
