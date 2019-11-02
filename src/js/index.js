@@ -35,9 +35,9 @@ export function handleBonus(total, player) {
 
 export function handleRoll() {
   dom.addScoreBoxEventListeners()
-  const { canRoll, dice, rollCount } = game.rollDice()
+  const { dice, rollCount } = game.rollDice()
 
-  if (canRoll) dom.updateDiceArea(dice, rollCount)
+  if (rollCount <= 3) dom.updateDiceArea(dice, rollCount)
 }
 
 export function toggleHeldDice(index) {
