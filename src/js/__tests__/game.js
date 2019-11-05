@@ -31,12 +31,41 @@ describe('Game', () => {
       game.rollDice()
       game.getPoints('pch')
       const result = game
-
+      
       game.updateScore()
 
       expect(game.getScore().score).toEqual(result.players.p1.score)
       expect(game.points).toEqual(0)
       expect(game.round).toEqual(result.round)
+    });
+
+    it('should decrement the round every time human player scores', () => {
+      const expected = {
+        round1: 12,
+        round2: 11
+      }
+      game.rollDice()
+      game.getPoints('pch')
+      
+      game.updateScore()
+      
+      expect(game.round).toEqual(expected.round1)
+      
+      game.nextPlayer()
+      game.rollDice()
+      game.getPoints('cch')
+      
+      game.updateScore()
+      
+      expect(game.round).toEqual(expected.round1)
+      
+      game.nextPlayer()
+      game.rollDice()
+      game.getPoints('pu3')
+      
+      game.updateScore()
+      
+      expect(game.round).toEqual(expected.round2)
     });
   });
 
