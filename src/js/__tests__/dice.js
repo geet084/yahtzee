@@ -46,32 +46,33 @@ describe('Dice', () => {
 
   describe('New Roll', () => {
     it('should roll a new set of dice', () => {
-      const result = {
+      const expected = {
         roll: [1, 2, 1, 2, 1],
         rollCount: 1
       }
 
-      dice.newRoll()
+      const result = dice.newRoll()
 
-      expect(dice.rollCount).toEqual(result.rollCount)
-      expect(dice.roll).not.toEqual(result.roll)
+      expect(result.rollCount).toEqual(expected.rollCount)
+      expect(result.roll).not.toEqual(expected.roll)
     });
 
     it('should not re-roll dice that are held', () => {
       dice.newRoll()
-      const result = dice.roll
+      const heldDice = dice.roll
 
       dice.toggleHold(1)
       dice.toggleHold(3)
+      const mockRollOne = dice.newRoll()
+      
+      expect(mockRollOne.roll[1]).toEqual(heldDice[1])
+      expect(mockRollOne.roll[3]).toEqual(heldDice[3])
+      
+      const mockRollTwo = dice.newRoll()
       dice.newRoll()
 
-      expect(dice.roll[1]).toEqual(result[1])
-      expect(dice.roll[3]).toEqual(result[3])
-
-      dice.newRoll()
-
-      expect(dice.roll[1]).toEqual(result[1])
-      expect(dice.roll[3]).toEqual(result[3])
+      expect(mockRollTwo.roll[1]).toEqual(heldDice[1])
+      expect(mockRollTwo.roll[3]).toEqual(heldDice[3])
     });
   });
 });
