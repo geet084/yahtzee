@@ -22,7 +22,7 @@ export default class Dice {
       const notHeld = this.heldDice[i] === false
       if (notHeld) this.roll[i] = die
     })
-    return this.roll
+    return { roll: this.roll, rollCount: this.rollCount }
   }
 }
 
