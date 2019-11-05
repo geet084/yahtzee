@@ -5,7 +5,7 @@ import Dice from './dice.js';
 export default class Game {
   constructor() {
     this.round = 13
-    this.currentPlayer = 'p1';
+    this.currentPlayer = 'p1'
     this.players = { p1: new Player('human'), p2: new Player('comp') }
     this.dice = new Dice()
     this.points = 0
@@ -38,11 +38,10 @@ export default class Game {
   }
 
   rollDice() {
-    this.dice.newRoll()
-
+    const { roll, rollCount } = this.dice.newRoll()
     return {
-      dice: this.dice.roll,
-      rollCount: this.dice.rollCount
+      dice: roll,
+      rollCount: rollCount
     }
   }
 
