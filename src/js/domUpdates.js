@@ -215,7 +215,6 @@ function returnToSplash() {
 
 function restartGame() {
   highScores(select('#p-ttlscore').innerText)
-  highScores(select('#c-ttlscore').innerText)
   index.newGame()
   select('.btm-section').addEventListener('click', handleClick)
 
