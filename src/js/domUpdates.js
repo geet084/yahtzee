@@ -55,6 +55,7 @@ export function updateScore(score, player) {
     animateScoredBox(target)
     animateDice(target)
     target.classList.remove('hold')
+    target.classList.remove('pulse-hold')
     target.classList.add('scored')
   }
   removeScoreBoxEventListeners()
@@ -269,6 +270,7 @@ function scoreBox({ target }) {
     target.innerText = index.getRolledPoints(target.id);
   }
   target.classList.add('hold')
+  select('.hold').classList.add('pulse-hold')
 }
 
 function handleClick({ target }) {
@@ -299,6 +301,7 @@ function clearLastBox() {
 
     if (notScored) {
       box.classList.remove('hold')
+      box.classList.remove('pulse-hold')
       box.innerText = ''
     }
   })
