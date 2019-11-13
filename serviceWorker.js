@@ -1,4 +1,4 @@
-const cacheName = 'version 1.11'
+const cacheName = 'version 1.12'
 self.addEventListener("install", function (event) {
   // console.log('WORKER: install event in progress.');
   event.waitUntil(
@@ -18,6 +18,10 @@ self.addEventListener("install", function (event) {
         */
         return cache.addAll([
           './',
+          './audio/bloop.wav',
+          './audio/roll.wav',
+          './audio/tick.wav',
+          './audio/whoosh.wav',
           './images/icon-72.png',
           './images/icon-96.png',
           './images/icon-128.png',

@@ -358,5 +358,5 @@ function getFormattedDate(date) {
 }
 
 function playSound(type) {
-  new Audio(`../../sounds/${type}.wav`).play()
+  new Audio(`./audio/${type}.wav`).play()
 }
