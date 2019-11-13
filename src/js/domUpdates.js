@@ -26,6 +26,7 @@ select('.single').addEventListener('click', togglePlayers)
 select('.computer').addEventListener('click', togglePlayers)
 
 function togglePlayers() {
+  playSound('tick')
   getDOMArray('.comp').forEach(box => {
     const visible = box.style.visibility === 'hidden'
     box.style.visibility = visible ? 'inherit' : 'hidden'
@@ -50,6 +51,7 @@ export function removeScoreBoxEventListeners() {
 
 export function updateScore(score, player) {
   select(`#${player}-ttlscore`).innerText = score
+  playSound('whoosh')
   const target = select('.hold')
   if (target) {
     animateScoredBox(target)
@@ -96,6 +98,7 @@ function animateDice(target) {
 
 export function updateDiceArea(dice, count) {
   clearLastBox()
+  playSound('roll')
   getDOMArray('.dice').map((die, i) => {
     if (!die.classList.contains('held')) die.classList.add('bounce')
     die.innerText = dice[i]
@@ -203,6 +206,7 @@ function startGame() {
 }
 
 function returnToSplash() {
+  playSound('tick')
   const gameOver = getDOMArray('.scored').length >= 13
   select('.main-splash').style.display = ''
   select('.main-game').style.display = 'none'
@@ -215,6 +219,7 @@ function returnToSplash() {
 }
 
 function restartGame() {
+  playSound('tick')
   highScores(select('#p-ttlscore').innerText)
   index.newGame()
   select('.btm-section').addEventListener('click', handleClick)
@@ -290,6 +295,7 @@ function handleDice({ id, classList, innerText }) {
   const notBlank = innerText !== ''
   const notHeld = !classList.contains('held')
 
+  playSound('bloop')
   if (notBlank) index.toggleHeldDice(die)
   if (notBlank && notHeld) classList.add('held')
   else classList.remove('held')
@@ -349,4 +355,8 @@ function getFormattedDate(date) {
   let day = date.getDate().toString().padStart(2, '0');
 
   return month + '/' + day + '/' + year;
+}
+
+function playSound(type) {
+  new Audio(`../../sounds/${type}.wav`).play()
 }
