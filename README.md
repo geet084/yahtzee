@@ -12,7 +12,7 @@
 
 
 ## Background
-This project began as a challenge, could I build an game, without frameworks, that behaved like a native app? This of course involved making it a Progressive Web App as well as not having some of the luxuries that come with frameworks like React and Vue.
+This project began as a challenge, could I build a game, without frameworks, that behaved like a native app? This of course involved making it a Progressive Web App as well as not having some of the luxuries that come with frameworks like React and Vue.
 
 ## About
 Yahtzee is an app where you can roll some dice in your free time. Whether you play by yourself or against the computer, enjoy your favorite game of chance from the convenience of your phone.
