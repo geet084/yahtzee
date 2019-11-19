@@ -10,6 +10,44 @@
   --tertiary-color: #b0a295;
 }
 
+.help-box {
+  position: absolute;
+  visibility: hidden;
+  background-color: white;
+  z-index: 2;
+  width: 160px;
+  height: 50px;
+  border-radius: 5px;
+  padding: 2px 2px 2px 3px;
+  box-shadow: 5px 5px 10px -1px rgb(0, 0, 0);
+}
+
+.infoTitle {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.infoBody {
+  margin: 0;
+  font-size: .8rem;
+}
+
+.infoScore {
+  margin: 0;
+  font-size: .8rem;
+  font-style: italic;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+}
+
 .onoffswitch {
   position: relative;
   width: 140px;
