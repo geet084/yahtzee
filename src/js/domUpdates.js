@@ -24,6 +24,58 @@ select('.end-return').addEventListener('click', returnToSplash)
 select('.restart').addEventListener('click', restartGame)
 select('.single').addEventListener('click', togglePlayers)
 select('.computer').addEventListener('click', togglePlayers)
+getDOMArray('.die').forEach(die => die.addEventListener('click', helpBox))
+select('.overlay').addEventListener('click', helpBox)
+select('.help-box').addEventListener('click', helpBox)
+
+function helpBox({ target }) {
+  const helpBox = select('.help-box')
+  const overlay = select('.overlay')
+
+  if (helpBox.style.visibility === 'visible') {
+    helpBox.style.visibility = 'hidden'
+    overlay.style.zIndex = '-10'
+    overlay.style.backgroundColor = ''
+  } else {
+    target = !target.classList.contains('die') ? target.closest('.die') : target
+
+    const distTop = getElementOffset(target).top;
+    const distLeft = getElementOffset(target).left;
+
+    helpBox.style.top = `${distTop + 60}px`
+    helpBox.style.left = `${distLeft + 5}px`
+    helpBox.style.visibility = 'visible'
+    helpBox.style.color = 'rgb(93, 90, 97)'
+    let helpInfo = getHelpText(target.classList[1])
+    helpBox.innerHTML = helpInfo
+
+    overlay.style.zIndex = '2'
+    overlay.style.backgroundColor = 'rgba(0,0,0,0.3)'
+  }
+}
+
+function getHelpText(target) {
+  switch (target) {
+    case 'x3':
+      return '<div><p class="infoTitle">3 of a Kind</p><p class="infoBody">At least three of the same dice.</p><p class="infoScore">Score: Sum of all dice</p></div>'
+    case 'x4':
+      return '<div><p class="infoTitle">4 of a Kind</p><p class="infoBody">At least four of the same dice.</p><p class="infoScore">Score: Sum of all dice</p></div>'
+    case 'fh':
+      return '<div><p class="infoTitle">Full House</p><p class="infoBody">A three of a kind and a pair.</p><p class="infoScore">Score: 25 points</p></div>'
+    case 'ss':
+      return '<div><p class="infoTitle">Small Straight</p><p class="infoBody">Four dice in a sequence.</p><p class="infoScore">Score: 30 points</p></div>'
+    case 'ls':
+      return '<div><p class="infoTitle">Large Straight</p><p class="infoBody">Five dice in a sequence.</p><p class="infoScore">Score: 40 points</p></div>'
+    case 'x5':
+      return '<div><p class="infoTitle">Yahtzee</p><p class="infoBody">All five of the same dice.</p><p class="infoScore">Score: 50 points</p></div>'
+    case 'chance-box':
+      return '<div><p class="infoTitle">Chance</p><p class="infoBody">Any combination of dice.</p><p class="infoScore">Score: Sum of all dice</p></div>'
+    default:
+      if (target === 'six') target += 'e'
+      const targetTitle = target[0].toUpperCase() + target.slice(1)
+      return `<div><p class="infoTitle">${targetTitle}s</p><p class="infoBody">Any number of ${targetTitle}s.</p><p class="infoScore">Score: Sum of ${targetTitle}s</p></div>`
+  }
+}
 
 function togglePlayers() {
   playSound('tick')
@@ -61,7 +113,7 @@ export function updateScore(score, player) {
     target.classList.add('scored')
   }
   removeScoreBoxEventListeners()
-  if(player === 'p') index.playComp()
+  if (player === 'p') index.playComp()
 }
 
 function animateScoredBox(target) {
