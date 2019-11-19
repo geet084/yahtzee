@@ -50,7 +50,7 @@ function helpBox({ target }) {
     helpBox.innerHTML = helpInfo
 
     overlay.style.zIndex = '2'
-    overlay.style.backgroundColor = 'rgba(0,0,0,0.3)'
+    overlay.style.backgroundColor = 'rgba(0,0,0,0.4)'
   }
 }
 
