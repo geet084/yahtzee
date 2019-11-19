@@ -1,4 +1,4 @@
-const cacheName = 'version 1.14'
+const cacheName = 'version 1.15'
 self.addEventListener("install", function (event) {
   // console.log('WORKER: install event in progress.');
   event.waitUntil(
