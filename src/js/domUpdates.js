@@ -65,7 +65,7 @@ function getHelpText(target) {
     case 'ss':
       return '<div><p class="infoTitle">Small Straight</p><p class="infoBody">Four dice in a sequence</p><p class="infoScore">Score: 30 points</p></div>'
     case 'ls':
-      return '<div><p class="infoTitle">Large Straight</p><p class="infoBody">Five dice in a sequence.</p><p class="infoScore">Score: 40 points</p></div>'
+      return '<div><p class="infoTitle">Large Straight</p><p class="infoBody">Five dice in a sequence</p><p class="infoScore">Score: 40 points</p></div>'
     case 'x5':
       return '<div><p class="infoTitle">Yahtzee</p><p class="infoBody">All five of the same dice</p><p class="infoScore">Score: 50 points</p></div>'
     case 'chance-box':
